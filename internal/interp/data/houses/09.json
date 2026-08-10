@@ -1,0 +1,17 @@
+{
+  "number": 9,
+  "signs": {
+    "aries": "You take up a belief with conviction and drop it just as decisively, and you travel on impulse rather than by itinerary.",
+    "taurus": "You arrive at your convictions slowly and then hold them for life, and you travel to places you can return to again and again.",
+    "gemini": "You collect ideas and philosophies without settling on one, study widely and shallowly, and travel often and lightly.",
+    "cancer": "Your beliefs come from your upbringing whether you kept them or reacted against them, and you travel best with people you love.",
+    "leo": "You believe wholeheartedly and say so, teach naturally, and travel in a way that makes a story worth telling afterwards.",
+    "virgo": "You are sceptical of grand claims and want the evidence, study a subject properly rather than broadly, and plan travel in detail.",
+    "libra": "You weigh competing philosophies fairly and struggle to commit to one, and you are drawn to other cultures for their beauty.",
+    "scorpio": "You cannot leave a belief unexamined, are drawn to what a religion or ideology hides, and travel to be changed by it.",
+    "sagittarius": "This is your home ground: study, travel and meaning are where you expand, and the horizon is always the interesting part.",
+    "capricorn": "You want a philosophy that will bear weight, are suspicious of easy answers, and study or travel with a purpose in mind.",
+    "aquarius": "You built your worldview yourself out of dissatisfaction with the one handed to you, and it is more radical than you let on.",
+    "pisces": "Your faith is felt rather than reasoned, you are drawn to the mystical rather than the doctrinal, and travel has a dreamlike quality for you."
+  }
+}

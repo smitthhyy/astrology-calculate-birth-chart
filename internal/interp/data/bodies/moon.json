@@ -1,0 +1,55 @@
+{
+  "key": "moon",
+  "name": "Moon",
+  "defines": "Your inner life — what you need to feel safe, how you react before you have thought about it, and the conditions under which you can rest.",
+  "signs": {
+    "aries": {
+      "definition": "You settle by doing something about it. Feelings arrive fast, at full volume, and pass almost as quickly once they have been discharged.",
+      "showsUp": "You flare and then it is genuinely over, you cannot sit with a problem you are not allowed to act on, and you find slow emotional processing excruciating."
+    },
+    "taurus": {
+      "definition": "You settle through the senses and through sameness. Comfort is physical for you — warmth, food, familiar surroundings, an unhurried afternoon.",
+      "showsUp": "You calm down by eating something good or getting outside, you resist being rushed through a feeling, and sudden change unsettles you more than difficulty does."
+    },
+    "gemini": {
+      "definition": "You settle by putting it into words. An unspoken feeling stays unresolved; naming it is most of the work of managing it.",
+      "showsUp": "You talk or write your way out of a mood, you get restless when there is nothing new to think about, and you can rationalise a feeling before you have finished having it."
+    },
+    "cancer": {
+      "definition": "You settle through closeness and continuity. Home, family and the people who have known you a long time are not comforts on top of life but the foundation of it.",
+      "showsUp": "You feel other people's states as if they were your own, you keep things that carry memory, and you withdraw into your shell rather than say you have been hurt."
+    },
+    "leo": {
+      "definition": "You settle when you feel valued. Being appreciated is not vanity for you — it is the evidence that you matter to the people you have given yourself to.",
+      "showsUp": "You are openly affectionate, you take being overlooked hard, and you recover quickly once someone genuinely sees you."
+    },
+    "virgo": {
+      "definition": "You settle by putting things in order. Anxiety turns into a task list, and a tidied space or a solved problem does more for you than reassurance does.",
+      "showsUp": "You clean, sort or fix when you are worried, you struggle to switch off from noticing what is wrong, and you look after people practically rather than sentimentally."
+    },
+    "libra": {
+      "definition": "You settle when things are peaceful between people. Discord in the room registers in your body, and you cannot rest properly while something is unresolved.",
+      "showsUp": "You smooth things over quickly, you find raised voices genuinely destabilising, and you can agree to something you do not want in order to end the tension."
+    },
+    "scorpio": {
+      "definition": "You settle only where you feel completely safe, and that takes a long time to establish. Your feelings run deep, private and all the way down.",
+      "showsUp": "You watch people carefully before you trust them, you feel things far more intensely than you show, and betrayal is the one thing you find almost impossible to undo."
+    },
+    "sagittarius": {
+      "definition": "You settle when you can see a way out and a way forward. Optimism is an emotional strategy for you, not just a temperament.",
+      "showsUp": "You get claustrophobic in heavy moods and other people's, you cheer yourself up by planning something, and you would rather laugh about a hurt than sit inside it."
+    },
+    "capricorn": {
+      "definition": "You settle through competence. Feeling in control of your circumstances does more for your peace of mind than being comforted does.",
+      "showsUp": "You cope first and feel later, you find needing help harder than giving it, and you were often the steady one long before you should have had to be."
+    },
+    "aquarius": {
+      "definition": "You settle by stepping back. Distance is how you regulate — you understand a feeling much better from a little way outside it.",
+      "showsUp": "You go cool rather than loud when upset, you need a lot of unsupervised time, and you can describe your emotions accurately while seeming detached from them."
+    },
+    "pisces": {
+      "definition": "You settle when the boundaries soften. Music, water, sleep and imagination are not escapes for you so much as the medium you emotionally live in.",
+      "showsUp": "You absorb the feeling of a room without meaning to, you need real solitude to recover from crowds, and you find it hard to tell your own mood from someone else's."
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "number": 3,
+  "signs": {
+    "aries": "You say it before you have finished thinking it, argue to find out what you believe, and learn best by having a go.",
+    "taurus": "You speak slowly and mean it, take your time absorbing anything new, and are almost impossible to argue out of a settled view.",
+    "gemini": "Talking is how you think; you keep several conversations running, read constantly, and are the sibling or neighbour everybody hears from.",
+    "cancer": "You communicate in tone more than in content, remember exactly how things were said, and are closely bound to your siblings or your street.",
+    "leo": "Your voice carries and you use it; you make an entrance in a conversation, and you were either the class star or the class clown.",
+    "virgo": "You proofread everything including conversations, keep meticulous notes, and were the pupil who had actually done the reading.",
+    "libra": "You phrase everything diplomatically, see both sides before you have chosen one, and argue the missing position almost involuntarily.",
+    "scorpio": "You research rather than chat, and a sibling or a school year holds something your family still does not discuss.",
+    "sagittarius": "You speak in broad strokes and get caught on the detail, say what you think unedited, and learn by going somewhere and seeing.",
+    "capricorn": "Your schooling was hard going or cut short, you write better than you speak, and whatever you do learn stays learned.",
+    "aquarius": "You learned in a way that did not suit the school you were put in, and your siblings and neighbours are an odd assortment.",
+    "pisces": "Facts blur for you but atmosphere never does, and you pick up what a sibling or a neighbour is carefully not saying."
+  }
+}

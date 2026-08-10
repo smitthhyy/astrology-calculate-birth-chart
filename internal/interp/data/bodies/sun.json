@@ -1,0 +1,55 @@
+{
+  "key": "sun",
+  "name": "Sun",
+  "defines": "Your core identity — the self you are growing into, what gives you vitality, and the purpose you organise a life around.",
+  "signs": {
+    "aries": {
+      "definition": "Identity built on initiative. You come to know yourself through starting things, and your sense of being alive is tied to having something to push against.",
+      "showsUp": "You decide fast and apologise later, you would rather act imperfectly than wait, and you lose energy quickly in situations where nothing is happening."
+    },
+    "taurus": {
+      "definition": "Identity built on steadiness. You know who you are through what you can hold onto — your body, your work, your comforts, the things you have built slowly.",
+      "showsUp": "You take your time making up your mind and then barely move once it is made, and you are quietly unimpressed by urgency that has no substance behind it."
+    },
+    "gemini": {
+      "definition": "Identity built on curiosity. You find yourself through language, questions and contact, and you become more yourself the more you have to think about.",
+      "showsUp": "You talk your way into understanding, keep several interests running at once, and go flat in company where nobody is exchanging anything."
+    },
+    "cancer": {
+      "definition": "Identity built on belonging. You know yourself through the people and places you care for, and your strength comes from having something worth protecting.",
+      "showsUp": "You read the mood of a room before you speak, remember what matters to people, and retreat rather than argue when you feel unsafe."
+    },
+    "leo": {
+      "definition": "Identity built on expression. You become most yourself when you are seen doing something you have put your whole heart into.",
+      "showsUp": "You are generous with warmth and attention, you take creative work personally, and you feel the absence of recognition more sharply than you admit."
+    },
+    "virgo": {
+      "definition": "Identity built on usefulness. You know yourself by what you improve, and your self-respect is bound up with doing a thing properly.",
+      "showsUp": "You notice the detail nobody else has, you would rather fix a problem than be thanked for it, and you are harder on yourself than on anyone around you."
+    },
+    "libra": {
+      "definition": "Identity built in relation. You come to know yourself through others — in comparison, in partnership, in the balance you strike between your needs and theirs.",
+      "showsUp": "You weigh both sides instinctively, you find bluntness genuinely uncomfortable, and you can lose track of your own preference while accommodating someone else's."
+    },
+    "scorpio": {
+      "definition": "Identity built on depth. You know yourself through what you have survived and what you refuse to look away from.",
+      "showsUp": "You give little away early, you see straight through performance, and you commit completely or not at all."
+    },
+    "sagittarius": {
+      "definition": "Identity built on meaning. You become yourself by going further — into travel, study, belief, or any horizon that is not the one you were handed.",
+      "showsUp": "You say the honest thing before you have considered how it lands, you need room to move, and you go restless when life narrows to routine."
+    },
+    "capricorn": {
+      "definition": "Identity built on achievement. You know yourself through what you take responsibility for and what you can point to as built.",
+      "showsUp": "You are serious young and lighter later, you plan in years rather than weeks, and you struggle to rest without having earned it."
+    },
+    "aquarius": {
+      "definition": "Identity built on independence. You know yourself by where you differ, and your sense of purpose comes from an idea larger than your own life.",
+      "showsUp": "You question the rule rather than follow it, you keep a certain distance even from people you love, and you are loyal to principles ahead of hierarchies."
+    },
+    "pisces": {
+      "definition": "Identity built on permeability. You know yourself through what you absorb — atmospheres, music, other people's feelings — and through what you can imagine.",
+      "showsUp": "You take on the mood of whoever you are with, you need solitude to find your own edges again, and you are drawn to whatever dissolves the ordinary."
+    }
+  }
+}

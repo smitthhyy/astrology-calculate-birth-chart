@@ -1,0 +1,55 @@
+{
+  "key": "neptune",
+  "name": "Neptune",
+  "defines": "Where the boundaries blur — what you idealise, imagine and can deceive yourself about. Neptune spends about fourteen years in a sign, so this is a description of your generation's dream; the house it falls in shows where it touches your own life.",
+  "signs": {
+    "aries": {
+      "definition": "A generation that idealised the pioneer and the fresh start. The dream was of the individual who simply begins again.",
+      "showsUp": "You are inspired by courage and self-invention, and you can romanticise action for its own sake."
+    },
+    "taurus": {
+      "definition": "A generation that idealised abundance and the land. The dream was of a settled, plentiful, physically beautiful life.",
+      "showsUp": "You are moved by beauty in tangible things, and you can be sentimental about money, property or a simpler past."
+    },
+    "gemini": {
+      "definition": "A generation that idealised communication and cleverness. The dream was that if we could all just talk to each other, it would be solved.",
+      "showsUp": "You are enchanted by words and ideas, and you can mistake a well-put argument for a true one."
+    },
+    "cancer": {
+      "definition": "A generation that idealised home and belonging. The dream was of the family that keeps you safe.",
+      "showsUp": "You are deeply moved by anything to do with roots and childhood, and you can be nostalgic for a past that was never quite like that."
+    },
+    "leo": {
+      "definition": "A generation that idealised glamour and the performing self. The dream was of the transcendent star.",
+      "showsUp": "You are drawn to romance and spectacle, and you can lose yourself in an image of who you would like to be."
+    },
+    "virgo": {
+      "definition": "A generation that idealised purity, health and being of service. The dream was that things could be made properly clean.",
+      "showsUp": "You are inspired by craft and by care, and you can be undone by a standard of purity that nothing real ever meets."
+    },
+    "libra": {
+      "definition": "A generation that idealised the perfect partnership. The dream was of relationships as harmony without cost.",
+      "showsUp": "You are moved by art and by fairness, and you can idealise a person past the point where you can see them."
+    },
+    "scorpio": {
+      "definition": "A generation that idealised intensity and transformation. The dream was that going all the way down would purify something.",
+      "showsUp": "You are drawn to what is taboo or hidden, and you can mistake intensity for meaning."
+    },
+    "sagittarius": {
+      "definition": "A generation that idealised faith and the far horizon. The dream was that the answer was somewhere else.",
+      "showsUp": "You are inspired by philosophy and by travel, and you can chase a belief further than the evidence goes."
+    },
+    "capricorn": {
+      "definition": "A generation that idealised achievement and institutions — and then watched the idealisation dissolve.",
+      "showsUp": "You are moved by mastery and legacy, and you can be disillusioned when the structures you trusted turn out to be ordinary."
+    },
+    "aquarius": {
+      "definition": "A generation that idealised the collective and the technological future. The dream was of a networked humanity.",
+      "showsUp": "You are inspired by shared causes and by what technology might make possible, and you can be utopian about how people actually behave."
+    },
+    "pisces": {
+      "definition": "A generation that idealised compassion and dissolution itself. Neptune rules this sign, so the dream was the medium rather than the message.",
+      "showsUp": "You are unusually porous to atmosphere, art and suffering, and you need deliberate structure to keep from drifting."
+    }
+  }
+}

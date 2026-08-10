@@ -1,0 +1,71 @@
+{
+  "body": "sun",
+  "with": {
+    "moon": {
+      "conjunction": "What you want and what you need are the same thing, which makes you singular and rather one-note; you were born near a new moon.",
+      "harmonious": "Your intentions and your instincts agree, so you rarely argue with yourself and can seem unfairly untroubled to people who do.",
+      "square": "What you want keeps colliding with what you need, and you tend to secure one at the cost of the other before noticing.",
+      "opposition": "You were born near a full moon and you feel it: pulled between doing and resting, and often meeting the argument in somebody else."
+    },
+    "mercury": {
+      "conjunction": "You think of yourself as your mind, so your opinions and your identity are hard to prise apart and disagreement lands personally.",
+      "harmonious": "You can say what you mean without effort, and explaining yourself is one of the ways you work out who you are.",
+      "square": "Your thinking undercuts your confidence, or your confidence overrides your thinking, and either way the second-guessing arrives after you have committed.",
+      "opposition": "You argue with your own reasoning as though it belonged to someone else, and it takes another person to make you finish the thought."
+    },
+    "venus": {
+      "conjunction": "Being liked and being yourself are the same project, and charm comes so easily that you have used it before noticing.",
+      "harmonious": "You are comfortable inside your own taste, and warmth is something people register about you within the first few minutes.",
+      "square": "What you want and what would please everyone pull apart, and you spend energy on being agreeable that you needed elsewhere.",
+      "opposition": "You find out what you are worth by watching how somebody else responds to you, which works until they stop."
+    },
+    "mars": {
+      "conjunction": "You are your own engine: forceful, competitive, quick to heat, and thoroughly miserable when there is nothing to push against.",
+      "harmonious": "Your energy is available when you want it, you act on decisions rather than sitting with them, and courage is not something you have to summon.",
+      "square": "You go at things too hard and then wonder why you are exhausted; the temper and the ambition are the same piece of wiring.",
+      "opposition": "Your drive keeps arriving from outside, through rivals and provocation, and you do your best work when somebody has annoyed you."
+    },
+    "jupiter": {
+      "conjunction": "You expect things to work out and often enough they do, but you take on more than one person can reasonably carry.",
+      "harmonious": "Confidence and generosity come easily, opportunities find you, and you have seldom had to fight for the benefit of the doubt.",
+      "square": "Your reach exceeds your grasp on a regular basis, and the overestimate is always of yourself rather than of the situation.",
+      "opposition": "People keep offering you more than you can handle, and you locate your limits only by going some way past them."
+    },
+    "saturn": {
+      "conjunction": "You were serious early, you hold yourself to a standard nobody set, and your own approval is the hardest of all to obtain.",
+      "harmonious": "You are steady in a way that does not need announcing, you finish what you start, and responsibility sits on you comfortably.",
+      "square": "Something in you cancels your own permission, and you work twice as hard for the confidence other people appear to have been issued at birth.",
+      "opposition": "Authority turns up as somebody else — a parent, a boss, a critic — and the work of your life is not needing their sign-off."
+    },
+    "uranus": {
+      "conjunction": "You are constitutionally unable to do it the ordinary way, and your sense of who you are depends on being unpredictable.",
+      "harmonious": "Your originality is usable rather than disruptive: you find the odd solution, and people accept it because you are not defensive about it.",
+      "square": "You break your own arrangements just as they settle, and the freedom you keep insisting on costs you more than you will admit.",
+      "opposition": "The disruption comes from outside, through people who will not be managed, and your life changes direction without much warning."
+    },
+    "neptune": {
+      "conjunction": "Your sense of who you are is porous, you take on the colour of whatever surrounds you, and you are more artistic than certain.",
+      "harmonious": "Imagination and compassion are simply part of your character, and you can lose yourself in making something without losing your footing.",
+      "square": "You do not quite know who you are, and you fill the gap with an ideal, an image, or something that blurs the question.",
+      "opposition": "People project onto you and you let them, so you have been idealised and then disappointed in roughly equal measure."
+    },
+    "pluto": {
+      "conjunction": "There is a force in you that others feel before they can name it, and you have already been remade at least once.",
+      "harmonious": "You can go the whole way into something and come back out again, which makes you useful in the situations everyone else avoids.",
+      "square": "You fight for control, including over yourself, and the tighter you grip the more thoroughly the situation makes you rebuild.",
+      "opposition": "Power arrives through other people, and you have had to learn the difference between influencing somebody and overpowering them."
+    },
+    "ascendant": {
+      "conjunction": "The person people meet is the person you are; there is very little front, for better and for worse.",
+      "harmonious": "How you come across and who you actually are agree with each other, so you make a coherent impression without working at it.",
+      "square": "The impression you make gets in your own way, and people keep responding to a version of you that you did not intend.",
+      "opposition": "You only see yourself clearly in company, and the way others describe you rarely matches how you experience yourself."
+    },
+    "midheaven": {
+      "conjunction": "What you do and who you are cannot be separated, which makes work meaningful and makes losing it a crisis of identity.",
+      "harmonious": "Your character and your direction point the same way, so getting on is a matter of being more yourself rather than less.",
+      "square": "Your ambition and your nature are at odds, and you have held jobs that suited your talent but not your temperament.",
+      "opposition": "Your public direction pulls against your private foundation, and you cannot advance in one without paying for it in the other."
+    }
+  }
+}

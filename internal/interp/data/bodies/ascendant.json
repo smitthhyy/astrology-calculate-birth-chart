@@ -1,0 +1,55 @@
+{
+  "key": "ascendant",
+  "name": "Ascendant",
+  "defines": "The sign rising on the eastern horizon at your birth: your outward manner, first impression, and the way you meet anything new. It depends on the exact minute of birth more than any other point.",
+  "signs": {
+    "aries": {
+      "definition": "You arrive at speed. The first thing people register about you is energy and directness, whatever is going on underneath.",
+      "showsUp": "You walk fast and speak plainly, you volunteer before you have thought it through, and people read you as braver than you feel."
+    },
+    "taurus": {
+      "definition": "You arrive calmly. People find you steady and unhurried, with a physical presence that settles a room rather than stirring it.",
+      "showsUp": "You are slow to be flustered, you speak in an even register, and people assume you are more relaxed about things than you are."
+    },
+    "gemini": {
+      "definition": "You arrive talking. The first impression is quick, curious and sociable — you make contact through conversation before anything else.",
+      "showsUp": "You ask questions to break the ice, you seem younger than you are, and people read you as lighter than you actually are."
+    },
+    "cancer": {
+      "definition": "You arrive carefully. People meet a gentle, watchful manner, and you take a while to come out from behind it.",
+      "showsUp": "You are warm but guarded with strangers, you deflect questions about yourself, and people find you approachable long before they find you knowable."
+    },
+    "leo": {
+      "definition": "You arrive noticeably. There is a warmth and a presentation to how you present yourself that makes you memorable on first meeting.",
+      "showsUp": "You dress and carry yourself with some deliberateness, you are generous with your attention, and people remember meeting you."
+    },
+    "virgo": {
+      "definition": "You arrive observing. People meet someone precise, modest and slightly reserved, taking the measure of things before joining in.",
+      "showsUp": "You are neat and understated, you ask practical questions, and people underestimate you until they see you work."
+    },
+    "libra": {
+      "definition": "You arrive pleasantly. The first impression is graceful and accommodating; you meet people halfway before they have asked you to.",
+      "showsUp": "You are easy to talk to and hard to read, you avoid saying the disagreeable thing, and people find you charming before they find you clear."
+    },
+    "scorpio": {
+      "definition": "You arrive guarded. People sense there is more going on than you are showing, and they are right.",
+      "showsUp": "You give away little at first, you hold eye contact longer than most, and people find you either compelling or unsettling with very little middle ground."
+    },
+    "sagittarius": {
+      "definition": "You arrive open. The first impression is friendly, frank and a little larger than the situation calls for.",
+      "showsUp": "You are quick to laugh and quick to say the honest thing, and people read you as more casual about consequences than you are."
+    },
+    "capricorn": {
+      "definition": "You arrive composed. People meet someone contained and capable, and they tend to assume you are in charge.",
+      "showsUp": "You are formal with strangers, sparing with your reactions, and read as older and more serious than you are — which reverses as you get older."
+    },
+    "aquarius": {
+      "definition": "You arrive at a slight angle. People register something distinctive about you and a friendliness that keeps its distance.",
+      "showsUp": "You are sociable without being intimate, you say the unexpected thing, and people find you interesting before they find you close."
+    },
+    "pisces": {
+      "definition": "You arrive softly. Your edges are indistinct on first meeting, and people project a good deal onto you.",
+      "showsUp": "You adapt to whoever you are with, you are hard for people to pin down, and different people describe you quite differently."
+    }
+  }
+}

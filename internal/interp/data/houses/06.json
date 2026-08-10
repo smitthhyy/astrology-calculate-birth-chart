@@ -1,0 +1,17 @@
+{
+  "number": 6,
+  "signs": {
+    "aries": "You work in sprints and burn out on routine, need physical exertion to stay well, and are impatient with anyone slower than you.",
+    "taurus": "You work steadily and dislike being hurried, keep the same habits for years, and your health depends on regular food and sleep.",
+    "gemini": "You need variety in your working day, do several jobs at once, and your health is affected by how busy your mind is.",
+    "cancer": "You need to feel at home where you work and take the atmosphere of the office personally; your health follows your mood closely.",
+    "leo": "You need your work to be seen and appreciated, put your name on what you do, and lose energy when you feel taken for granted.",
+    "virgo": "This is where you are most competent: methodical, thorough, and quietly anxious about health and about doing the job properly.",
+    "libra": "You work best in partnership and badly in conflict, and the fairness of a workplace matters to you more than the pay.",
+    "scorpio": "You work intensely and privately, are drawn to jobs others avoid, and treat your own health as something to be investigated.",
+    "sagittarius": "You need freedom and variety in your working day, resist being managed closely, and are casual about health until you are not.",
+    "capricorn": "Your working day is structured to the hour and your job title matters to you more than you admit; the strain settles in your back, knees and teeth.",
+    "aquarius": "You do the job your own way, question the standard procedure as a matter of course, and are drawn to unusual or technical work.",
+    "pisces": "Routine dissolves the moment you stop enforcing it, and your symptoms are the vague kind that doctors find hard to pin down."
+  }
+}

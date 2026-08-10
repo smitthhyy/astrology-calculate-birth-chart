@@ -1,0 +1,35 @@
+{
+  "body": "saturn",
+  "with": {
+    "uranus": {
+      "conjunction": "You are conservative and radical at the same time, and you build the new thing carefully enough that it survives.",
+      "harmonious": "You can reform something without breaking it, which makes you unusually useful inside institutions that need changing.",
+      "square": "You want security and escape simultaneously, so you construct careful arrangements and then blow them up.",
+      "opposition": "The pressure to change and the pressure to stay come from different people, and you have been the one standing between them."
+    },
+    "neptune": {
+      "conjunction": "You harden your dreams into something workable, or you let reality dissolve them, and there has rarely been a middle path.",
+      "harmonious": "You can give a formless idea a structure, which is a rarer skill than it sounds and much of your value rests on it.",
+      "square": "Your fears are vague and therefore unanswerable, and you have disciplined yourself against a threat you could never quite name.",
+      "opposition": "Duty and longing pull against each other, usually with a person at each end, and neither has ever quite released you."
+    },
+    "pluto": {
+      "conjunction": "You endure what other people would not, and the hardest years of your life built the part of you that works.",
+      "harmonious": "You can rebuild from the foundations without flinching, and you are who people want in charge once it has gone badly.",
+      "square": "You meet obstruction with force and force with obstruction, and a good deal of your energy has gone into the grinding.",
+      "opposition": "Authority and power have come at you from outside, and what you learned from them was mostly how not to use them."
+    },
+    "ascendant": {
+      "conjunction": "You come across as older and more contained than you are, and people have treated you as the responsible one since childhood.",
+      "harmonious": "Your manner is dependable and earns trust quickly, particularly from people who have to hand something over.",
+      "square": "You are read as guarded or unfriendly when you were only being careful, and it has cost you introductions.",
+      "opposition": "You attract people who set the terms, and much of your adult life has been about no longer needing their approval."
+    },
+    "midheaven": {
+      "conjunction": "Your career is a long climb with real authority at the top of it, and nothing about it has come early.",
+      "harmonious": "You are trusted with responsibility because you have never yet dropped any, and your standing accumulates rather than arrives.",
+      "square": "Your ambitions keep meeting the limits of your circumstances, and you have started over later than most people do.",
+      "opposition": "Duty at home and duty at work have both claimed you, and you have felt like a failure at whichever one you set down."
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "number": 5,
+  "signs": {
+    "aries": "You fall for people fast and hard, your creative work starts in a rush, and you play to win even when nothing is at stake.",
+    "taurus": "Your pleasures are physical and unhurried, your creative work is made by hand, and your romances are slow to start and slow to end.",
+    "gemini": "You flirt by talking, keep several creative projects going at once, and are drawn to people who are interesting before they are anything else.",
+    "cancer": "Romance and family run together for you, your creative work comes from memory and feeling, and you are protective of what you make.",
+    "leo": "This is where you are most yourself: wholehearted in love, generous with children, and unembarrassed about wanting an audience.",
+    "virgo": "You are shy about performing and exacting about what you make, and you show affection by attending to the small practical things.",
+    "libra": "You are in love with being in love, your creative taste is refined, and romance matters to you as an art rather than an appetite.",
+    "scorpio": "You do not do casual; your romances are consuming, your creative work goes to uncomfortable places, and you play for real stakes.",
+    "sagittarius": "You are drawn to romances that widen your world, your creativity needs room to wander, and you take risks for the pleasure of it.",
+    "capricorn": "You were serious young and play came late; your creative work is disciplined, and you approach romance as something to be built.",
+    "aquarius": "Your romantic life follows its own rules, your creative work is odd and original, and friendship is the ground your affections grow from.",
+    "pisces": "Romance arrives as enchantment rather than as a decision, your creative work seems to come through you rather than from you, and children unguard you."
+  }
+}

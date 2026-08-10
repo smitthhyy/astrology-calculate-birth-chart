@@ -1,0 +1,55 @@
+{
+  "key": "jupiter",
+  "name": "Jupiter",
+  "defines": "Where you grow and what you have faith in — the areas life tends to open up for you, and where your generosity and your excess both live.",
+  "signs": {
+    "aries": {
+      "definition": "You grow by starting. Opportunity comes to you when you back yourself early, and faith for you means the confidence that you will manage.",
+      "showsUp": "You are lucky in what you begin, generous with encouragement, and inclined to take on more than any one person could deliver."
+    },
+    "taurus": {
+      "definition": "You grow through accumulation. Steady effort, physical comfort and material security are where your good fortune actually lands.",
+      "showsUp": "You attract resources by being reliable, you are generous with hospitality, and you overdo comfort as easily as you build it."
+    },
+    "gemini": {
+      "definition": "You grow through learning and contact. Your opportunities arrive through conversations, and knowing a little about a great deal is genuinely useful to you.",
+      "showsUp": "You collect interests and useful acquaintances, you teach and explain naturally, and you scatter yourself across too many subjects."
+    },
+    "cancer": {
+      "definition": "You grow through care. Family, home and the people you look after are where life gives back to you most reliably.",
+      "showsUp": "You are generous with emotional support and with your kitchen, you build a wide chosen family, and you can smother where you meant to shelter."
+    },
+    "leo": {
+      "definition": "You grow through self-expression. Backing your own creativity, warmth and presence is what opens doors for you.",
+      "showsUp": "You are very generous and enjoy being so, you attract goodwill by being wholehearted, and you can inflate your own part in the story."
+    },
+    "virgo": {
+      "definition": "You grow through mastery of the practical. Your expansion is unglamorous and real: skill, health, competence, work well done.",
+      "showsUp": "You are generous with your time and expertise, you improve everything you get involved in, and you can shrink an opportunity by over-analysing it."
+    },
+    "libra": {
+      "definition": "You grow through other people. Partnerships, collaborations and being well liked are where the doors open.",
+      "showsUp": "You attract allies easily, you are generous with fairness and with credit, and you can commit to too many people at once."
+    },
+    "scorpio": {
+      "definition": "You grow through what you are willing to face. Crisis, depth and other people's resources are where your fortune is unexpectedly found.",
+      "showsUp": "You come out of difficult periods larger rather than smaller, you are generous in private and rarely mention it, and you can be excessive about whatever you fix on."
+    },
+    "sagittarius": {
+      "definition": "You grow through breadth. Jupiter rules this sign: travel, study, belief and anything that widens the horizon are simply good for you.",
+      "showsUp": "Opportunities arrive from far away or from strangers, your optimism is genuinely infectious, and you promise more than the day can hold."
+    },
+    "capricorn": {
+      "definition": "You grow through structure. Your rewards come late and hold, and you have more faith in effort than in luck.",
+      "showsUp": "You build slowly and keep what you build, you are generous with responsibility rather than with money, and you can be austere with yourself past the point of usefulness."
+    },
+    "aquarius": {
+      "definition": "You grow through community and ideas. Networks, causes and the future are where life opens up for you.",
+      "showsUp": "Opportunities come through friends and groups, you are generous with your knowledge and your time, and you can be doctrinaire about your convictions."
+    },
+    "pisces": {
+      "definition": "You grow through compassion and imagination. Faith, art and the willingness to let go are where you expand.",
+      "showsUp": "You give without keeping account, you are drawn to what has no obvious use, and you can be taken advantage of before you notice."
+    }
+  }
+}

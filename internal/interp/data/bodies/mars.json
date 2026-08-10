@@ -1,0 +1,55 @@
+{
+  "key": "mars",
+  "name": "Mars",
+  "defines": "How you assert yourself — the way you pursue what you want, expend energy, and handle anger and conflict.",
+  "signs": {
+    "aries": {
+      "definition": "Direct, immediate force. Mars rules this sign: you go straight at the thing, and hesitation costs you more than a mistake does.",
+      "showsUp": "You act first and think in motion, your temper is quick and quickly spent, and you are at your best under pressure and worst when idle."
+    },
+    "taurus": {
+      "definition": "Slow, immovable force. You do not start quickly, but once you are going you simply do not stop.",
+      "showsUp": "You have enormous stamina, you are very hard to provoke and frightening when finally provoked, and you dig in rather than escalate."
+    },
+    "gemini": {
+      "definition": "Force applied through words and manoeuvre. You win by arguing, outflanking or simply moving faster than the problem.",
+      "showsUp": "You are quick and cutting in an argument, you spread your energy across several things, and you get bored before finishing what you began."
+    },
+    "cancer": {
+      "definition": "Force in defence of something. You are not naturally aggressive, but you become formidable when what you care about is threatened.",
+      "showsUp": "You go sideways rather than head-on, you sulk or withdraw instead of confronting, and you fight hardest on someone else's behalf."
+    },
+    "leo": {
+      "definition": "Force with an audience. You want your effort to mean something and to be seen meaning it, and pride carries you a long way.",
+      "showsUp": "You put on a real performance when it counts, your anger is loud and theatrical rather than lasting, and you will not be made to look small."
+    },
+    "virgo": {
+      "definition": "Force applied with precision. You do not push harder, you push exactly where it will work, and you prepare before you act.",
+      "showsUp": "You get things done through method and persistence, your irritation comes out as criticism, and you exhaust yourself on details nobody asked for."
+    },
+    "libra": {
+      "definition": "Force that hesitates. Asserting yourself sits awkwardly with your instinct to keep things even, so you negotiate where others would push.",
+      "showsUp": "You avoid confrontation until it has built up, you are good at arguing a case rather than having a row, and you are indirect about what you actually want."
+    },
+    "scorpio": {
+      "definition": "Concentrated, strategic force. You do not spend energy casually; you wait, and then commit everything at once.",
+      "showsUp": "You are relentless once set on something, you hold anger silently rather than express it, and you never quite forget who did what."
+    },
+    "sagittarius": {
+      "definition": "Force pointed at a horizon. You pursue what you believe in and lose interest in anything that does not enlarge you.",
+      "showsUp": "You throw yourself into things wholeheartedly, your anger is loud and honest and over quickly, and you need physical freedom to stay level."
+    },
+    "capricorn": {
+      "definition": "Disciplined, sustained force. Mars works well here: you set an objective and grind steadily towards it for as long as it takes.",
+      "showsUp": "You work harder than anyone and mention it less, you control your temper almost completely, and you are ruthless about what does not serve the goal."
+    },
+    "aquarius": {
+      "definition": "Force in service of a principle. You act when something is wrong in the structure rather than when you personally feel slighted.",
+      "showsUp": "You resist authority reflexively, you get things done in unorthodox ways, and your anger is cold and reasoned rather than hot."
+    },
+    "pisces": {
+      "definition": "Diffuse, indirect force. You do not assert yourself in a straight line, and your energy comes in tides rather than at a constant level.",
+      "showsUp": "You avoid open conflict, you get your way through sympathy or evasion, and your drive rises and falls with your mood."
+    }
+  }
+}

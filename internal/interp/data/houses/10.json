@@ -1,0 +1,17 @@
+{
+  "number": 10,
+  "signs": {
+    "aries": "You get on in the world by going first, are drawn to work where something has to be started, and make your name young.",
+    "taurus": "You build a career slowly and hold the ground you take, and you are known for being someone who does not move under pressure.",
+    "gemini": "Your working life has several chapters and possibly several careers, and you are known for what you say and how you say it.",
+    "cancer": "You are known for looking after people, your career and your home life pull at each other, and reputation feels personal to you.",
+    "leo": "You want work that has your name on it, are comfortable being the visible one, and your standing matters to you more than you admit.",
+    "virgo": "You are known for doing it properly, get on through competence rather than self-promotion, and are the one others rely on.",
+    "libra": "Your career runs on relationships and on being well liked, and you are drawn to work involving fairness, mediation or design.",
+    "scorpio": "You accumulate quiet influence rather than visible position, are drawn to work with real stakes, and your career has been rebuilt at least once.",
+    "sagittarius": "Your career takes you elsewhere, literally or intellectually, and you are known for candour and for a wider view than the job requires.",
+    "capricorn": "This is your home ground: ambition is structural for you, authority comes with time, and you are taken seriously by middle age.",
+    "aquarius": "You get on by doing it differently, are drawn to work with a cause behind it, and are uncomfortable inside a conventional hierarchy.",
+    "pisces": "Your vocation is felt rather than chosen, your public direction stays unclear for a long time, and the work that finally fits is caring or creative."
+  }
+}

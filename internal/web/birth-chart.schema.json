@@ -1,0 +1,828 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/birth-chart.schema.json",
+  "title": "Birth chart",
+  "description": "A natal chart: the birth details it was cast from, the conventions it was cast under, every calculated position, and the written readings kept separately from all of it. Calculated values are authoritative as numbers; the formatted strings beside them are for display and are truncated, never rounded.",
+  "type": "object",
+  "required": [
+    "$schema",
+    "format",
+    "formatVersion",
+    "version",
+    "generatedAt",
+    "generator",
+    "calculationSettings",
+    "rawInput",
+    "birth",
+    "birthDataQuality",
+    "calculatedChart",
+    "interpretations",
+    "warnings"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Where this document's schema is served."
+    },
+    "format": {
+      "const": "birth-chart"
+    },
+    "formatVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "The format's semantic version. The major component moves when a consumer written against the old shape would break."
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "The major component of formatVersion, for a consumer that only needs to know which generation of the format it holds."
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the document was written, in UTC. Not a property of the chart: two exports of the same birth differ here and nowhere else."
+    },
+    "generator": { "$ref": "#/$defs/generator" },
+    "calculationSettings": { "$ref": "#/$defs/calculationSettings" },
+    "rawInput": { "$ref": "#/$defs/rawInput" },
+    "birth": { "$ref": "#/$defs/birth" },
+    "birthDataQuality": { "$ref": "#/$defs/birthDataQuality" },
+    "calculatedChart": { "$ref": "#/$defs/calculatedChart" },
+    "interpretations": { "$ref": "#/$defs/interpretations" },
+    "warnings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/warning" },
+      "description": "Everything the reader was told about how the input was interpreted. An empty array means nothing was found, not that nothing was looked for."
+    }
+  },
+
+  "$defs": {
+    "generator": {
+      "type": "object",
+      "description": "The software and the data that produced the chart, as against the astrological conventions it was cast under.",
+      "required": [
+        "application",
+        "applicationVersion",
+        "calculationEngineVersion",
+        "ephemerides",
+        "ephemerisVersions",
+        "timeZoneDatabase",
+        "formatting"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "application": { "type": "string" },
+        "applicationVersion": { "type": "string" },
+        "calculationEngineVersion": {
+          "type": "string",
+          "description": "The version of the calculation itself. It moves only when a computed number could change, so a consumer holding a cached chart can tell whether recasting it would give the same answer."
+        },
+        "ephemerides": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/ephemeris" }
+        },
+        "ephemerisVersions": {
+          "type": "object",
+          "description": "The same provenance flattened to source-name against version.",
+          "additionalProperties": { "type": "string" }
+        },
+        "timeZoneDatabase": {
+          "type": "object",
+          "required": ["name", "version", "source"],
+          "additionalProperties": false,
+          "properties": {
+            "name": { "type": "string" },
+            "version": {
+              "type": ["string", "null"],
+              "description": "Null when the version cannot be determined at run time, which is the usual case: neither the Go standard library's embedded copy nor a host's own zoneinfo files publish one. Historical zone rules do get corrected, so a guessed version would be worse than none."
+            },
+            "source": { "type": "string" }
+          }
+        },
+        "formatting": {
+          "type": "object",
+          "description": "How the display strings in this document were made.",
+          "required": ["displayPrecision", "displayRounding", "degreeSeparators"],
+          "additionalProperties": false,
+          "properties": {
+            "displayPrecision": {
+              "enum": ["arcsecond"],
+              "description": "The smallest unit any formatted position carries."
+            },
+            "displayRounding": {
+              "enum": ["truncate"],
+              "description": "Truncation, which is the ephemeris convention. Rounding 29°59'40\" up would give 30°00', a degree belonging to the next sign."
+            },
+            "degreeSeparators": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "ephemeris": {
+      "type": "object",
+      "required": ["key", "name", "covers", "source", "version"],
+      "additionalProperties": false,
+      "properties": {
+        "key": { "type": "string" },
+        "name": { "type": "string" },
+        "covers": { "type": "string", "description": "Which bodies come from this source." },
+        "source": { "type": "string", "description": "The publication the theory comes from." },
+        "version": {
+          "type": "string",
+          "description": "This implementation of the theory, which is what actually produced the numbers. The theory is fixed; an implementation of it can be corrected."
+        }
+      }
+    },
+
+    "calculationSettings": {
+      "type": "object",
+      "description": "Every astrological convention the chart depends on. Two programs can disagree about a chart while both being right, and none of these choices is recoverable from a longitude.",
+      "required": [
+        "zodiac",
+        "houseSystem",
+        "houseSystemName",
+        "nodeType",
+        "lilithType",
+        "rulershipSystem",
+        "observerPerspective",
+        "coordinateReference",
+        "aspectRules",
+        "aspectCalculation",
+        "housePlacementRules"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "zodiac": {
+          "enum": ["tropical", "sidereal"],
+          "description": "The frame the signs are measured in. The tropical zodiac begins at the equinox of the date and drifts against the constellations."
+        },
+        "houseSystem": {
+          "type": "string",
+          "description": "Machine-readable key for the system actually used, which can differ from the one asked for — see the warnings."
+        },
+        "houseSystemName": { "type": "string" },
+        "nodeType": {
+          "enum": ["true", "mean"],
+          "description": "The true node oscillates about a degree and a half either side of the mean node, which is more than most orbs allow."
+        },
+        "lilithType": {
+          "enum": ["mean", "true", "none"],
+          "description": "Which Black Moon Lilith is given, when one is."
+        },
+        "rulershipSystem": {
+          "enum": ["traditional", "modern"],
+          "description": "Which scheme decides a sign's ruler, and so which body the chart ruler is."
+        },
+        "observerPerspective": {
+          "enum": ["geocentric", "topocentric", "heliocentric"],
+          "description": "Where the chart is drawn from. Topocentric would correct for the observer's position on the surface, a difference reaching about a degree for the Moon."
+        },
+        "coordinateReference": {
+          "type": "object",
+          "description": "The reference frame every position is given in. All three parts matter: a longitude referred to J2000 rather than to the date would be nearly half a degree out for a twentieth-century birth.",
+          "required": ["frame", "equinox", "ecliptic"],
+          "additionalProperties": false,
+          "properties": {
+            "frame": { "type": "string" },
+            "equinox": { "type": "string" },
+            "ecliptic": { "type": "string" }
+          }
+        },
+        "aspectRules": {
+          "type": "array",
+          "description": "Every aspect searched for, with the orb allowed. An aspect absent from calculatedChart.aspects is either outside its orb or not in this list.",
+          "items": { "$ref": "#/$defs/aspectRule" }
+        },
+        "aspectCalculation": {
+          "type": "object",
+          "description": "Exactly what was compared with what. Without this, a consumer finding aspects the document does not list cannot tell whether the two programs disagree about the geometry or about what counts as a point.",
+          "required": [
+            "includedCategories",
+            "includedPoints",
+            "includeNodes",
+            "includeHouseCusps",
+            "includeDerivedPoints",
+            "includeMinorAspects",
+            "note"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "includedCategories": { "type": "array", "items": { "type": "string" } },
+            "includedPoints": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Point keys, matching calculatedChart.points[].key."
+            },
+            "includeNodes": { "type": "boolean" },
+            "includeHouseCusps": { "type": "boolean" },
+            "includeDerivedPoints": { "type": "boolean" },
+            "includeMinorAspects": { "type": "boolean" },
+            "note": { "type": "string" }
+          }
+        },
+        "housePlacementRules": {
+          "type": "object",
+          "required": ["cuspConvention", "cuspAllowanceDegrees"],
+          "additionalProperties": false,
+          "properties": {
+            "cuspConvention": { "type": "string" },
+            "cuspAllowanceDegrees": {
+              "type": "number",
+              "minimum": 0,
+              "description": "How far before the next cusp a point is nonetheless assigned to the next house. Zero here: no point is moved forward."
+            }
+          }
+        }
+      }
+    },
+
+    "aspectRule": {
+      "type": "object",
+      "required": ["name", "key", "glyph", "angle", "orb", "luminaryOrb", "minor"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "key": { "type": "string" },
+        "glyph": { "type": "string" },
+        "angle": { "type": "number", "minimum": 0, "maximum": 180 },
+        "orb": { "type": "number", "minimum": 0 },
+        "luminaryOrb": {
+          "type": "number",
+          "minimum": 0,
+          "description": "The orb allowed instead when the Sun or Moon is one of the pair."
+        },
+        "minor": { "type": "boolean" }
+      }
+    },
+
+    "rawInput": {
+      "type": "object",
+      "description": "The form exactly as it was typed, before validation or normalisation, so the document can be fed straight back in to reproduce itself.",
+      "required": [
+        "name", "date", "time", "zone", "location", "country",
+        "latitude", "longitude", "timeStatus", "timeSource"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "date": { "type": "string", "description": "As typed, day first." },
+        "time": { "type": "string" },
+        "zone": { "type": "string", "description": "IANA zone name, or empty if the birthplace's own zone was used." },
+        "location": { "type": "string" },
+        "country": { "type": "string" },
+        "latitude": { "type": "string" },
+        "longitude": { "type": "string" },
+        "timeStatus": { "type": "string" },
+        "timeSource": { "type": "string" }
+      }
+    },
+
+    "birth": {
+      "type": "object",
+      "description": "When and where, resolved.",
+      "required": [
+        "name", "local", "utc", "localDate", "localTime",
+        "timeZone", "place", "julianDay", "siderealTime"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "local": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The instant with the birthplace's own offset."
+        },
+        "utc": { "type": "string", "format": "date-time" },
+        "localDate": { "type": "string", "format": "date" },
+        "localTime": { "type": "string", "pattern": "^[0-9]{2}:[0-9]{2}$" },
+        "timeZone": {
+          "type": "object",
+          "required": ["name", "abbreviation", "utcOffset", "utcOffsetSeconds", "daylightSaving"],
+          "additionalProperties": false,
+          "properties": {
+            "name": { "type": "string" },
+            "abbreviation": {
+              "type": ["string", "null"],
+              "description": "Null for a zone with no name of its own, whose abbreviation would only repeat utcOffset."
+            },
+            "utcOffset": { "type": "string", "pattern": "^[+-][0-9]{2}:[0-9]{2}$" },
+            "utcOffsetSeconds": { "type": "integer" },
+            "daylightSaving": {
+              "type": "boolean",
+              "description": "Whether summer time was in force at birth, which is the commonest single cause of a chart being an hour out."
+            }
+          }
+        },
+        "place": {
+          "type": "object",
+          "required": ["name", "country", "latitude", "longitude", "latitudeText", "longitudeText"],
+          "additionalProperties": false,
+          "properties": {
+            "name": { "type": "string" },
+            "country": { "type": "string" },
+            "latitude": { "type": "number", "minimum": -90, "maximum": 90 },
+            "longitude": {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180,
+              "description": "East positive."
+            },
+            "latitudeText": {
+              "type": "string",
+              "description": "The same coordinate with the hemisphere as a letter, removing any doubt about the sign convention."
+            },
+            "longitudeText": { "type": "string" }
+          }
+        },
+        "julianDay": {
+          "type": "object",
+          "required": ["universalTime", "terrestrialTime"],
+          "additionalProperties": false,
+          "properties": {
+            "universalTime": { "type": "number" },
+            "terrestrialTime": {
+              "type": "number",
+              "description": "The same instant on the uniform time scale the ephemerides are computed in. The two differ by ΔT, about a minute for a mid-twentieth-century birth."
+            }
+          }
+        },
+        "siderealTime": {
+          "type": "object",
+          "description": "The local apparent sidereal time, which is also the right ascension of the meridian. With the obliquity it is all another program needs to rebuild these cusps under a different house system.",
+          "required": ["localApparentDegrees", "localApparentHours", "obliquityDegrees"],
+          "additionalProperties": false,
+          "properties": {
+            "localApparentDegrees": { "type": "number", "minimum": 0, "exclusiveMaximum": 360 },
+            "localApparentHours": { "type": "string" },
+            "obliquityDegrees": {
+              "type": "number",
+              "description": "The true obliquity of the ecliptic on the day, nutation included."
+            }
+          }
+        }
+      }
+    },
+
+    "birthDataQuality": {
+      "type": "object",
+      "description": "How much the birth data can be relied on. Nothing here changes a single computed number; all of it changes what those numbers are worth. A chart whose time was guessed has an Ascendant, and it means nothing.",
+      "required": [
+        "timeStatus", "timeStatusLabel", "source", "timeAccuracySeconds",
+        "rectified", "locationSource", "locationAccuracyMetres"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "timeStatus": {
+          "enum": ["recorded", "approximate", "rectified", "unknown", "unstated"],
+          "description": "\"unstated\" is the default and is not a claim of accuracy: it means nothing was said, and must not be read as \"recorded\"."
+        },
+        "timeStatusLabel": { "type": "string" },
+        "source": {
+          "type": ["string", "null"],
+          "description": "Whatever the reader said the time came from — a birth certificate, a parent's memory — or null."
+        },
+        "timeAccuracySeconds": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "How close to the truth the time can be taken to be, or null when nothing is known about that. A recorded time gets sixty seconds, which is the granularity of the input rather than a judgement about the record."
+        },
+        "rectified": {
+          "type": "boolean",
+          "description": "Stated separately so a consumer can exclude rectified charts from statistical use without caring about the other distinctions."
+        },
+        "locationSource": { "type": "string" },
+        "locationAccuracyMetres": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "description": "Null when it cannot be derived: a gazetteer record is a named point, not a bounded area, and the city's own extent — which is what the uncertainty really is — is not in the data."
+        }
+      }
+    },
+
+    "calculatedChart": {
+      "type": "object",
+      "description": "The chart proper. Calculated values only: nothing here is editorial, and nothing here changes with the day it is read on.",
+      "required": [
+        "houseSystem", "sect", "angles", "points", "derivedPoints",
+        "houses", "aspects", "moonPhase", "chartRuler", "distribution"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "houseSystem": { "type": "string" },
+        "sect": {
+          "type": ["string", "null"],
+          "enum": ["day", "night", null],
+          "description": "\"day\" when the Sun stood above the horizon at birth. Null when it could not be determined."
+        },
+        "angles": {
+          "type": "object",
+          "description": "The four cardinal points as plain ecliptic longitudes. Their full detail is in points, under the keys ascendant, descendant, midheaven and imumCoeli.",
+          "required": ["ascendant", "descendant", "midheaven", "imumCoeli"],
+          "additionalProperties": false,
+          "properties": {
+            "ascendant": { "$ref": "#/$defs/longitude" },
+            "descendant": { "$ref": "#/$defs/longitude" },
+            "midheaven": { "$ref": "#/$defs/longitude" },
+            "imumCoeli": { "$ref": "#/$defs/longitude" }
+          }
+        },
+        "points": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/point" }
+        },
+        "derivedPoints": {
+          "type": "array",
+          "description": "Points computed from the angles and the luminaries rather than read from an ephemeris. Kept apart because each needs its own formula stated beside it, and because none of them is a house occupant.",
+          "items": { "$ref": "#/$defs/point" }
+        },
+        "houses": {
+          "type": "array",
+          "minItems": 12,
+          "maxItems": 12,
+          "items": { "$ref": "#/$defs/house" }
+        },
+        "aspects": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/aspect" }
+        },
+        "moonPhase": {
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "required": ["name", "lunationPhase", "angle", "illumination"],
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The almanac name, which always agrees with illumination."
+                },
+                "lunationPhase": {
+                  "type": "string",
+                  "description": "The eighth of the cycle natal astrology reads, which is not always the same division as the almanac name."
+                },
+                "angle": {
+                  "type": "number",
+                  "minimum": 0,
+                  "exclusiveMaximum": 360,
+                  "description": "The Moon's elongation from the Sun, zero at the new moon."
+                },
+                "illumination": { "type": "number", "minimum": 0, "maximum": 1 }
+              }
+            }
+          ]
+        },
+        "chartRuler": {
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "required": ["ascendantSign", "ruler", "rulerKey", "position", "house"],
+              "additionalProperties": false,
+              "properties": {
+                "ascendantSign": { "type": "string" },
+                "ruler": {
+                  "type": "string",
+                  "description": "The ruler of the rising sign under calculationSettings.rulershipSystem. Under the other scheme it may be a different body."
+                },
+                "rulerKey": { "type": "string" },
+                "position": { "type": ["string", "null"] },
+                "house": { "type": ["integer", "null"], "minimum": 1, "maximum": 12 }
+              }
+            }
+          ]
+        },
+        "distribution": {
+          "type": "object",
+          "description": "The balance of the chart: the counts astrologers read at a glance before looking at anything in detail.",
+          "required": [
+            "basis", "countedPoints", "elements", "modalities",
+            "polarities", "hemispheres", "quadrants", "retrograde"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "basis": {
+              "type": "string",
+              "description": "What was counted. There is no single convention, and a bare count of four in Fire is meaningless without this."
+            },
+            "countedPoints": { "type": "array", "items": { "type": "string" } },
+            "elements": { "$ref": "#/$defs/counts" },
+            "modalities": { "$ref": "#/$defs/counts" },
+            "polarities": { "$ref": "#/$defs/counts" },
+            "hemispheres": { "$ref": "#/$defs/counts" },
+            "quadrants": { "$ref": "#/$defs/counts" },
+            "retrograde": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Keys of the bodies moving backwards at birth."
+            }
+          }
+        }
+      }
+    },
+
+    "longitude": {
+      "type": "number",
+      "minimum": 0,
+      "exclusiveMaximum": 360,
+      "description": "Ecliptic longitude in degrees, measured from 0° Aries."
+    },
+
+    "counts": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+
+    "point": {
+      "type": "object",
+      "description": "One body, angle, node or derived point. Calculation only: the written reading for it is under interpretations.points, keyed by the same key.",
+      "required": [
+        "key", "name", "glyph", "category", "longitudeDegrees", "position",
+        "coordinates", "decan", "sign", "house", "speedPerDay", "retrograde"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "key": { "type": "string", "description": "Stable camelCase identifier. Houses and aspects cross-reference by this." },
+        "name": { "type": "string" },
+        "glyph": { "type": "string" },
+        "category": { "type": "string" },
+        "longitudeDegrees": {
+          "$ref": "#/$defs/longitude",
+          "description": "The authoritative position. Everything else in this object is either derived from it or a different way of writing it."
+        },
+        "position": { "$ref": "#/$defs/position" },
+        "coordinates": { "$ref": "#/$defs/coordinates" },
+        "decan": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3,
+          "description": "Which ten-degree third of the sign the point falls in."
+        },
+        "sign": { "$ref": "#/$defs/sign" },
+        "house": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "speedPerDay": {
+          "type": ["number", "null"],
+          "description": "Degrees of ecliptic longitude per day. Null for the four angles and the derived points, whose motion comes from the Earth's rotation or from the chart's own arithmetic rather than from the ephemeris; reporting zero would read as \"stationary\"."
+        },
+        "retrograde": { "type": "boolean" },
+        "derivation": {
+          "$ref": "#/$defs/derivation",
+          "description": "Present only for a point computed from the chart itself. There is more than one Part of Fortune in circulation and a bare longitude cannot be compared."
+        }
+      }
+    },
+
+    "position": {
+      "type": "object",
+      "description": "A longitude as the sign and the degrees within it, broken out so nothing has to parse a formatted string to recover a number.",
+      "required": ["sign", "signKey", "degree", "minute", "second", "degreeInSignDegrees", "formatted"],
+      "additionalProperties": false,
+      "properties": {
+        "sign": { "type": "string" },
+        "signKey": { "type": "string" },
+        "degree": { "type": "integer", "minimum": 0, "maximum": 29 },
+        "minute": { "type": "integer", "minimum": 0, "maximum": 59 },
+        "second": {
+          "type": "number",
+          "minimum": 0,
+          "exclusiveMaximum": 60,
+          "description": "Keeps its fraction, so the three parts add back up to degreeInSignDegrees exactly."
+        },
+        "degreeInSignDegrees": { "type": "number", "minimum": 0, "exclusiveMaximum": 30 },
+        "formatted": {
+          "type": "string",
+          "description": "For display only, truncated to the arcsecond."
+        }
+      }
+    },
+
+    "coordinates": {
+      "type": "object",
+      "description": "The position in both systems. Declination cannot be recovered from ecliptic longitude alone, and it is what parallels and contra-parallels are read from.",
+      "required": [
+        "eclipticLongitudeDegrees", "eclipticLatitudeDegrees",
+        "rightAscensionDegrees", "declinationDegrees"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "eclipticLongitudeDegrees": { "$ref": "#/$defs/longitude" },
+        "eclipticLatitudeDegrees": { "type": "number", "minimum": -90, "maximum": 90 },
+        "rightAscensionDegrees": { "type": "number", "minimum": 0, "exclusiveMaximum": 360 },
+        "declinationDegrees": { "type": "number", "minimum": -90, "maximum": 90 }
+      }
+    },
+
+    "derivation": {
+      "type": "object",
+      "required": ["formulaType", "formula"],
+      "additionalProperties": false,
+      "properties": {
+        "formulaType": {
+          "type": "string",
+          "description": "Which variant — \"day\" or \"night\" for a lot, \"mean\" or \"true\" for a lunar point, \"western\" or \"eastern\" for a prime vertical point."
+        },
+        "formula": { "type": "string" }
+      }
+    },
+
+    "sign": {
+      "type": "object",
+      "required": ["key", "name", "glyph", "number", "element", "modality", "polarity", "ruler", "rulers"],
+      "additionalProperties": false,
+      "properties": {
+        "key": { "type": "string" },
+        "name": { "type": "string" },
+        "glyph": { "type": "string" },
+        "number": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "element": { "enum": ["Fire", "Earth", "Air", "Water"] },
+        "modality": { "enum": ["Cardinal", "Fixed", "Mutable"] },
+        "polarity": { "enum": ["Positive", "Negative"] },
+        "ruler": {
+          "type": "string",
+          "description": "The ruler under calculationSettings.rulershipSystem."
+        },
+        "rulers": {
+          "type": "object",
+          "description": "Both schemes, so a consumer reading traditionally can take the other without recasting the chart.",
+          "required": ["traditional", "modern"],
+          "additionalProperties": false,
+          "properties": {
+            "traditional": { "type": "string" },
+            "modern": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "house": {
+      "type": "object",
+      "required": ["number", "cusp", "sign", "ruler", "occupants"],
+      "additionalProperties": false,
+      "properties": {
+        "number": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "cusp": {
+          "type": "object",
+          "required": ["longitudeDegrees", "position"],
+          "additionalProperties": false,
+          "properties": {
+            "longitudeDegrees": { "$ref": "#/$defs/longitude" },
+            "position": { "$ref": "#/$defs/position" }
+          }
+        },
+        "sign": { "$ref": "#/$defs/sign" },
+        "ruler": {
+          "type": "string",
+          "description": "The ruler of the sign on the cusp — the house's own significator."
+        },
+        "occupants": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Keys of the bodies falling in the house. The angles are omitted because they are the cusps themselves, and the derived points because they are not bodies."
+        }
+      }
+    },
+
+    "aspect": {
+      "type": "object",
+      "required": [
+        "id", "between", "a", "b", "aspect", "aspectKey", "glyph", "nature", "minor",
+        "exactAngleDegrees", "separationDegrees", "orbDegrees", "orbFormatted",
+        "orbAllowedDegrees", "applying"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Stable identifier for the pairing, e.g. \"sun-square-saturn\". interpretations.aspects is keyed by this."
+        },
+        "between": { "type": "string" },
+        "a": { "type": "string", "description": "Point key." },
+        "b": { "type": "string", "description": "Point key." },
+        "aspect": { "type": "string" },
+        "aspectKey": { "type": "string" },
+        "glyph": { "type": "string" },
+        "nature": { "enum": ["harmonious", "challenging", "conjunction", "disjunct"] },
+        "minor": {
+          "type": "boolean",
+          "description": "True for the aspects switched on by request rather than counted by default."
+        },
+        "exactAngleDegrees": { "type": "number", "minimum": 0, "maximum": 180 },
+        "separationDegrees": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 180,
+          "description": "The angle the pair actually stands at."
+        },
+        "orbDegrees": {
+          "type": "number",
+          "minimum": 0,
+          "description": "How far from exact: the difference between separationDegrees and exactAngleDegrees."
+        },
+        "orbFormatted": { "type": "string" },
+        "orbAllowedDegrees": {
+          "type": "number",
+          "minimum": 0,
+          "description": "The widest orb this aspect could have had and still been listed. What makes a marginal aspect recognisable as one."
+        },
+        "applying": {
+          "type": ["boolean", "null"],
+          "description": "Whether the two were still closing on the exact aspect at birth. Null when the pair includes an angle, whose rate of motion the chart does not hold — which is not the same as false."
+        }
+      }
+    },
+
+    "interpretations": {
+      "type": "object",
+      "description": "The written readings, keyed to the calculated chart and versioned apart from it. A consumer wanting only the geometry can drop this whole object; an author replacing the text need not touch anything else.",
+      "required": ["locale", "system", "interpretationVersion", "generatedBy", "points", "houses", "aspects"],
+      "additionalProperties": false,
+      "properties": {
+        "locale": { "type": "string" },
+        "system": {
+          "type": "string",
+          "description": "The tradition the readings are written in. Traditional and Hellenistic astrology would read the same geometry differently."
+        },
+        "interpretationVersion": { "type": "string" },
+        "generatedBy": { "type": "string" },
+        "points": {
+          "type": "object",
+          "description": "Keyed by point key. A point with no text written for it is absent.",
+          "additionalProperties": {
+            "type": "object",
+            "description": "Nothing here is required, and the empty list says so deliberately: the planets and the horizon angles have all three texts, the secondary points only the last two, and a point with none of them does not appear at all. At least one is therefore always present.",
+            "required": [],
+            "minProperties": 1,
+            "additionalProperties": false,
+            "properties": {
+              "defines": { "type": "string", "description": "What the body signifies at all, independently of this chart." },
+              "definition": { "type": "string", "description": "What the sign does to that." },
+              "showsUp": { "type": "string", "description": "How the combination appears in a life." }
+            }
+          }
+        },
+        "houses": {
+          "type": "object",
+          "description": "Keyed by house number as a string.",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["governs"],
+            "additionalProperties": false,
+            "properties": {
+              "governs": { "type": "string" },
+              "showsUp": { "type": "string" }
+            }
+          }
+        },
+        "aspects": {
+          "type": "object",
+          "description": "Keyed by the aspect's id. The minor aspects have no text written for them, so they are absent here even when present in the chart.",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["showsUp"],
+            "additionalProperties": false,
+            "properties": {
+              "showsUp": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "warning": {
+      "type": "object",
+      "description": "Something the reader should know about how the chart was arrived at. Whether a chart can be trusted depends on things that show up nowhere in the numbers.",
+      "required": ["code", "severity", "message", "affectedFields"],
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "Stable identifier. The message may be reworded; this may not. A consumer switching on these will not be broken by a change of wording.",
+          "enum": [
+            "PLACIDUS_UNAVAILABLE",
+            "CLOCK_CHANGE_SKIPPED_TIME",
+            "CLOCK_CHANGE_REPEATED_TIME",
+            "TIME_ZONE_MISMATCH",
+            "TIME_ZONE_INFERRED",
+            "BIRTH_TIME_APPROXIMATE",
+            "BIRTH_TIME_UNKNOWN",
+            "BIRTH_TIME_RECTIFIED",
+            "POINT_NEAR_HOUSE_CUSP",
+            "ASPECT_NEAR_ORB_LIMIT"
+          ]
+        },
+        "severity": {
+          "enum": ["warning", "info"],
+          "description": "\"warning\" for anything that could make the chart wrong, \"info\" for something worth noticing that is nonetheless correct."
+        },
+        "message": { "type": "string" },
+        "affectedFields": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Dotted paths into this document, naming what should be treated with less confidence."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "number": 2,
+  "signs": {
+    "aries": "You earn in bursts and spend on impulse, and the money that arrives tends to come from something you started yourself.",
+    "taurus": "You build wealth slowly and keep it, take real pleasure in owning good things, and are very reluctant to part with any of them.",
+    "gemini": "You have several income streams rather than one, your finances fluctuate with your attention, and you talk about money easily.",
+    "cancer": "Security feels emotional rather than numerical for you, and what you own is tangled up with family, home and memory.",
+    "leo": "You spend generously and visibly, would rather have one good thing than five adequate ones, and your worth is tied to being appreciated.",
+    "virgo": "You track every figure, are quietly anxious about having enough regardless of what you have, and earn through being useful.",
+    "libra": "Your money is entangled with other people's, you spend on beauty and on company, and you find financial confrontation genuinely hard.",
+    "scorpio": "You are private about what you have, treat money as leverage rather than comfort, and go through periods of complete financial reinvention.",
+    "sagittarius": "You are casual with money and it mostly works out, you spend on travel and learning, and you dislike being tied to possessions.",
+    "capricorn": "You take earning seriously from young, are cautious with what you have, and end up more secure than people who worried less.",
+    "aquarius": "You hold unorthodox views on money and ownership, your income comes from unusual directions, and you resent being valued by your salary.",
+    "pisces": "Money slips through your hands without much accounting, you give it away readily, and you would rather not think about it at all."
+  }
+}

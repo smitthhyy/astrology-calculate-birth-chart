@@ -1,0 +1,29 @@
+{
+  "body": "uranus",
+  "with": {
+    "neptune": {
+      "conjunction": "You belong to a generation that pulled its ideals loose from their institutions, and you have never quite trusted a settled belief.",
+      "harmonious": "You can imagine an entirely different arrangement of things without being frightened by it, and you are patient about getting there.",
+      "square": "Your ideals and your need for freedom undercut each other, and you have abandoned causes as readily as you took them up.",
+      "opposition": "The vision and the disruption arrive separately, and you have watched a good many people mistake one of them for the other."
+    },
+    "pluto": {
+      "conjunction": "You came in with a generation that broke things open, and your personal upheavals have always had a wider tide behind them.",
+      "harmonious": "You can handle radical change without needing to be the one controlling it, which is rarer than it sounds.",
+      "square": "You force change and then resent the instability, and the crises of your life have been self-detonated as often as not.",
+      "opposition": "You have lived through the collision of what was and what had to be, and you were not the one who chose the timing."
+    },
+    "ascendant": {
+      "conjunction": "People find you striking and slightly unplaceable, and you would far rather be interesting than approved of.",
+      "harmonious": "Your unconventionality is easy to be around: people notice it straight away and are not put off by it.",
+      "square": "You are read as contrary before you have done anything, and the reaction confirms the position you had already taken.",
+      "opposition": "The unpredictable ones are always the people you end up with, and your life changes direction through them."
+    },
+    "midheaven": {
+      "conjunction": "Your career has taken turns nobody could have planned, and you are known for doing it your own way.",
+      "harmonious": "You can make a living out of what makes you unusual, and the sideways move has generally worked out.",
+      "square": "You cannot stay inside a structure once it settles, and you have left positions for the freedom rather than for anything better.",
+      "opposition": "Your work keeps disrupting your home or the other way about, and none of the upheavals were scheduled by you."
+    }
+  }
+}

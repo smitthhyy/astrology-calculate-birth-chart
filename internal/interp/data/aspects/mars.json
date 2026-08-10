@@ -1,0 +1,47 @@
+{
+  "body": "mars",
+  "with": {
+    "jupiter": {
+      "conjunction": "You go at things with more energy than caution, you enjoy the fight, and you recover from setbacks embarrassingly fast.",
+      "harmonious": "You act at the right moment and on the right scale, and your confidence is backed by enough follow-through to justify itself.",
+      "square": "You overcommit physically and financially, take on the large version of the task, and burn out within sight of the end.",
+      "opposition": "Somebody always eggs you on, and the risks you regret were the ones taken with an audience present."
+    },
+    "saturn": {
+      "conjunction": "You push against a brake you installed yourself; the work gets done, but it is heavy and nobody credits the effort.",
+      "harmonious": "Your energy is disciplined rather than showy: you work steadily, you last, and you finish what other people abandoned.",
+      "square": "Anger and inhibition arrive together, so you either sit on it until it comes out badly or push through and injure something.",
+      "opposition": "The obstruction is a person, and you have spent real years of your life working around somebody who would not move."
+    },
+    "uranus": {
+      "conjunction": "You act on impulse and at speed, you are drawn to risk, and your accidents and your breakthroughs come from the same reflex.",
+      "harmonious": "You act quickly when circumstances change, and you keep your nerve in situations that make other people freeze.",
+      "square": "You explode rather than argue, and the sudden decisions you are proudest of are indistinguishable at the time from the ones you regret.",
+      "opposition": "The provocation arrives from outside, and the people who set you off most reliably are the ones who most resemble you."
+    },
+    "neptune": {
+      "conjunction": "Your drive comes and goes without explanation, you act on inspiration rather than intention, and direct confrontation exhausts you.",
+      "harmonious": "You act in the service of something larger than yourself, and you can put real energy behind an idea nobody else can see yet.",
+      "square": "You cannot locate your anger until it has already gone sideways, and your efforts leak away into things that were never going to work.",
+      "opposition": "People undermine you quietly, or you allow it, and you discover too late that the situation was not what you were told."
+    },
+    "pluto": {
+      "conjunction": "You have enormous force at your disposal and no small setting: you either do not engage or you go the whole way.",
+      "harmonious": "You have real endurance and you hold your nerve when the stakes are high, which people notice and make use of.",
+      "square": "You get into fights about control that neither side can win, and the rage underneath is older than the argument.",
+      "opposition": "You meet your own force in other people, and the confrontations of your life have been the ones you could not walk away from."
+    },
+    "ascendant": {
+      "conjunction": "You come across as forceful whether or not you mean to, and people either back you or brace against you on sight.",
+      "harmonious": "You act decisively and it suits you; the impression you leave is capable rather than aggressive.",
+      "square": "Your manner reads as combative before you have said anything difficult, and you spend energy correcting for that.",
+      "opposition": "You meet your own aggression in whoever turns up in your life, and open conflict is a recurring feature rather than an accident."
+    },
+    "midheaven": {
+      "conjunction": "You go after your career rather than waiting for it, and you are known for drive and for the occasional scorched relationship.",
+      "harmonious": "You are effective in public and it advances you; ambition looks like competence on you rather than hunger.",
+      "square": "Your ambition keeps getting you into fights with precisely the people who were in a position to promote you.",
+      "opposition": "Your working life and your home life are in open competition for the same energy, and the home gives way first."
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "number": 11,
+  "signs": {
+    "aries": "You make friends quickly and fall out with them just as fast, and you are the one who gets a group moving.",
+    "taurus": "You keep the same few friends for decades, are slow to let anyone new in, and are the steady one in every group.",
+    "gemini": "You know a great many people lightly, your friendships run on conversation, and you are the connector between separate circles.",
+    "cancer": "Your friends become family, you look after the group, and you are hurt more than you say when you are left out of something.",
+    "leo": "You are warm and generous with your friends and want to be central to the group, and your circle tends to form around you.",
+    "virgo": "You are the useful one in every group, help practically rather than emotionally, and are quietly selective about who counts as a friend.",
+    "libra": "Your friendships are important and carefully balanced, you dislike group conflict, and you are the one who keeps everyone speaking.",
+    "scorpio": "You have few friends and they are deep ones, you test people before trusting them, and a betrayal ends a friendship for good.",
+    "sagittarius": "Your friends are scattered across places and outlooks, you pick them up easily, and you need a group that leaves you free.",
+    "capricorn": "You take friendship seriously and make it slowly, tend to end up organising the group, and your circle is small and long-standing.",
+    "aquarius": "This is your home ground: you belong to causes and communities, and your friends are the ones who are also slightly outside things.",
+    "pisces": "You absorb the mood of any group you join, are drawn to gentle or lost people, and your hopes for the future are unspecific but strong."
+  }
+}

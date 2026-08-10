@@ -1,0 +1,145 @@
+{{define "title"}}Birth Chart Calculator{{end}}
+
+{{define "main"}}
+<section class="intro">
+  <h1>Cast a birth chart</h1>
+  <p>
+    Enter a date, a time and a place. The chart is worked out from the full
+    planetary theory, so the positions match professional ephemerides to the
+    arcminute.
+  </p>
+</section>
+
+{{if .Errors.Any}}
+<div class="alert alert-error" role="alert">
+  <strong>That didn&rsquo;t work.</strong> Please check the highlighted fields below.
+</div>
+{{end}}
+
+<form class="birth-form" method="post" action="/chart" novalidate>
+  <div class="field">
+    <label for="name">First name</label>
+    <input type="text" id="name" name="name" value="{{.Input.Name}}" autocomplete="given-name"
+           {{if index .Errors "name"}}aria-invalid="true" aria-describedby="name-error"{{end}}>
+    {{with index .Errors "name"}}<p class="field-error" id="name-error">{{.}}</p>{{end}}
+  </div>
+
+  <div class="field-row">
+    <div class="field">
+      <label for="date">Date of birth</label>
+      <input type="text" id="date" name="date" value="{{.Input.Date}}" placeholder="dd/mm/yyyy"
+             inputmode="numeric" autocomplete="off"
+             {{if index .Errors "date"}}aria-invalid="true" aria-describedby="date-error"{{end}}>
+      <p class="field-hint">Day first, for example 15/06/1990.</p>
+      {{with index .Errors "date"}}<p class="field-error" id="date-error">{{.}}</p>{{end}}
+    </div>
+
+    <div class="field">
+      <label for="time">Time of birth</label>
+      <input type="text" id="time" name="time" value="{{.Input.Time}}" placeholder="hh:mm"
+             inputmode="numeric" autocomplete="off"
+             {{if index .Errors "time"}}aria-invalid="true" aria-describedby="time-error"{{end}}>
+      <p class="field-hint">24-hour clock. If unknown, 12:00 is the convention.</p>
+      {{with index .Errors "time"}}<p class="field-error" id="time-error">{{.}}</p>{{end}}
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="location">Place of birth</label>
+    <div class="combo" data-combo="places" data-endpoint="/api/places">
+      <input type="text" id="location" name="location" value="{{.Input.Location}}"
+             role="combobox" aria-expanded="false" aria-autocomplete="list"
+             aria-controls="location-list" autocomplete="off"
+             placeholder="Start typing a town or city"
+             {{if index .Errors "location"}}aria-invalid="true" aria-describedby="location-error"{{end}}>
+      <ul class="combo-list" id="location-list" role="listbox" hidden></ul>
+    </div>
+    <p class="field-hint">
+      {{.PlaceCount}} places are built in, searched on this machine.
+      {{if .AllowOnline}}<button type="button" class="linkish" data-online-search>Search online instead</button>{{end}}
+    </p>
+    {{with index .Errors "location"}}<p class="field-error" id="location-error">{{.}}</p>{{end}}
+  </div>
+
+  <div class="field-row">
+    <div class="field">
+      <label for="country">Country</label>
+      <input type="text" id="country" name="country" value="{{.Input.Country}}" autocomplete="off"
+             placeholder="Filled in when you pick a place">
+    </div>
+
+    <div class="field">
+      <label for="zone-search">Time zone</label>
+      <div class="combo" data-combo="zones">
+        <input type="text" id="zone-search" role="combobox" aria-expanded="false"
+               aria-autocomplete="list" aria-controls="zone-list" autocomplete="off"
+               placeholder="Search time zones">
+        <ul class="combo-list" id="zone-list" role="listbox" hidden></ul>
+      </div>
+      <input type="hidden" name="zone" id="zone" value="{{.Input.Zone}}">
+      <p class="field-hint" data-zone-current>{{if .Input.Zone}}{{.Input.Zone}}{{else}}No time zone chosen{{end}}</p>
+      {{with index .Errors "zone"}}<p class="field-error">{{.}}</p>{{end}}
+    </div>
+  </div>
+
+  {{/* Opened when the place could not be found, because this is the way out of
+       that error and a reader who has just been told their birthplace does not
+       exist should not have to go looking for it. */}}
+  <details class="advanced"{{if index .Errors "location"}} open{{end}}>
+    <summary>Set the coordinates by hand</summary>
+    <p class="field-hint">
+      Only needed if the birthplace is too small to be in the list. Positive
+      values are north and east. Fill these in and the place and country above
+      are kept exactly as you typed them, whether or not they are on file; if
+      you also leave the time zone blank, the zone of the nearest known place
+      is used and the chart says so.
+    </p>
+    <div class="field-row">
+      <div class="field">
+        <label for="latitude">Latitude</label>
+        <input type="text" id="latitude" name="latitude" value="{{.Input.Latitude}}"
+               inputmode="decimal" placeholder="-37.5662" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="longitude">Longitude</label>
+        <input type="text" id="longitude" name="longitude" value="{{.Input.Longitude}}"
+               inputmode="decimal" placeholder="143.8496" autocomplete="off">
+      </div>
+    </div>
+  </details>
+
+  <details class="advanced">
+    <summary>Say how well the time of birth is known</summary>
+    <p class="field-hint">
+      Optional, and it changes none of the calculations. The angles and the house
+      cusps move about a degree every four minutes, so a chart built on a
+      remembered time is a different sort of thing from one built on a
+      certificate &mdash; and once the chart is saved or handed to another
+      program, nothing else records which it was.
+    </p>
+    <div class="field-row">
+      <div class="field">
+        <label for="timeStatus">How the time is known</label>
+        <select id="timeStatus" name="timeStatus">
+          {{range .Input.TimeStatusOptions}}
+          <option value="{{.Value}}"{{if .Selected}} selected{{end}}>{{.Label}}</option>
+          {{end}}
+        </select>
+      </div>
+      <div class="field">
+        <label for="timeSource">Where it came from</label>
+        <input type="text" id="timeSource" name="timeSource" value="{{.Input.TimeSource}}"
+               autocomplete="off" placeholder="Birth certificate, my mother, hospital record">
+      </div>
+    </div>
+  </details>
+
+  <button type="submit" class="primary">Calculate the chart</button>
+</form>
+
+{{/* The zone list doubles as the data source for the searchable dropdown, so
+     it is not repeated as JSON. */}}
+<datalist id="zone-options">
+  {{range .Zones}}<option value="{{.Name}}" label="{{.Label}}"></option>{{end}}
+</datalist>
+{{end}}

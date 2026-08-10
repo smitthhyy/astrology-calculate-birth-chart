@@ -1,0 +1,55 @@
+{
+  "key": "pluto",
+  "name": "Pluto",
+  "defines": "Where you are remade — what you have power over and what has power over you. Pluto takes between twelve and thirty years to cross a sign, so this describes a whole cohort; the house it falls in shows where the pressure lands in your own life.",
+  "signs": {
+    "aries": {
+      "definition": "A cohort that transforms through raw self-assertion. What is being torn down and rebuilt is the idea of the individual will.",
+      "showsUp": "You do not accept being acted upon, and you can be uncompromising to the point of damage when your autonomy is threatened."
+    },
+    "taurus": {
+      "definition": "A cohort that transforms what value means. What is being torn down and rebuilt is money, ownership and our relationship with the earth.",
+      "showsUp": "You are deeply attached to what is yours, and your changes of direction are rare, slow and total."
+    },
+    "gemini": {
+      "definition": "A cohort that transforms how truth circulates. What is being torn down and rebuilt is information, media and language itself.",
+      "showsUp": "You understand that words are power, and you can be relentless in argument in a way you do not always notice."
+    },
+    "cancer": {
+      "definition": "A cohort that transforms the family. What is being torn down and rebuilt is home, ancestry and national belonging.",
+      "showsUp": "You carry inherited family intensity, and your deepest changes come through what happens with the people you came from."
+    },
+    "leo": {
+      "definition": "A cohort that transforms the self. What is being torn down and rebuilt is individuality, authority and the right to shine.",
+      "showsUp": "You need to be the author of your own life, and you feel any attempt to diminish you as a threat rather than a slight."
+    },
+    "virgo": {
+      "definition": "A cohort that transforms work and the body. What is being torn down and rebuilt is health, labour and the systems that maintain daily life.",
+      "showsUp": "You are compelled to fix and improve, and you can be self-critical in a way that corrodes rather than refines."
+    },
+    "libra": {
+      "definition": "A cohort that transforms relationship and justice. What is being torn down and rebuilt is marriage, fairness and the law.",
+      "showsUp": "Your relationships change you profoundly, and you can find yourself in power struggles disguised as negotiations."
+    },
+    "scorpio": {
+      "definition": "A cohort that transforms what is hidden. Pluto rules this sign, so the work is the exposure itself — of sexuality, death, money and power.",
+      "showsUp": "You are drawn to the truth beneath the surface, you keep your own depths private, and you rebuild yourself entirely more than once."
+    },
+    "sagittarius": {
+      "definition": "A cohort that transforms belief. What is being torn down and rebuilt is religion, ideology and the stories cultures tell themselves.",
+      "showsUp": "You cannot leave a conviction unexamined, and you can hold a belief with an intensity that shades into zeal."
+    },
+    "capricorn": {
+      "definition": "A cohort that transforms institutions. What is being torn down and rebuilt is government, business and structural authority.",
+      "showsUp": "You are ambitious in a serious, long-range way, and you understand how power actually operates rather than how it is described."
+    },
+    "aquarius": {
+      "definition": "A cohort that transforms the collective. What is being torn down and rebuilt is community, technology and who holds shared power.",
+      "showsUp": "You are compelled by the idea of a fairer system, and you can be absolute about a principle in a way that costs you personally."
+    },
+    "pisces": {
+      "definition": "A cohort that transforms the imagination. What is being torn down and rebuilt is faith, art and the collective unconscious.",
+      "showsUp": "You are pulled towards what dissolves the self, and you undergo your deepest changes quietly and largely unobserved."
+    }
+  }
+}

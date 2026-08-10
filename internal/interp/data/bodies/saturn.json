@@ -1,0 +1,55 @@
+{
+  "key": "saturn",
+  "name": "Saturn",
+  "defines": "Where you meet limits and build authority — the area you find hardest early and become genuinely competent at through effort and time.",
+  "signs": {
+    "aries": {
+      "definition": "The lesson is in self-assertion. Acting on your own behalf does not come freely; you have to learn to want something out loud.",
+      "showsUp": "You hesitate where others would push, you second-guess your own initiative, and you become notably brave once you have decided the cost is worth it."
+    },
+    "taurus": {
+      "definition": "The lesson is in security. Feeling that you have enough is work for you, whatever the actual figures say.",
+      "showsUp": "You worry about money and stability more than your situation warrants, you build slowly, and you end up more solid than the people who never worried."
+    },
+    "gemini": {
+      "definition": "The lesson is in speaking. Expressing yourself easily is not a given, and you have had to earn confidence in your own mind.",
+      "showsUp": "You were shy or self-conscious about how you spoke, you check what you say before saying it, and you become unusually precise and well-informed as a result."
+    },
+    "cancer": {
+      "definition": "The lesson is in belonging. Emotional safety and family are where the difficulty sits, and where the eventual mastery lies.",
+      "showsUp": "You are guarded about your inner life, you may have grown up looking after someone, and you build the security later that you did not have early."
+    },
+    "leo": {
+      "definition": "The lesson is in being seen. Taking up space and claiming your own creativity is genuinely hard, and genuinely worth it.",
+      "showsUp": "You downplay your talents, you fear looking foolish more than failing, and you come into real authority in your own work in mid-life."
+    },
+    "virgo": {
+      "definition": "The lesson is in enough. Standards are your discipline and your trap, and learning where good work stops is the task.",
+      "showsUp": "You are exacting to the point of paralysis, you carry health or work anxieties, and you become extremely reliable at what you take on."
+    },
+    "libra": {
+      "definition": "The lesson is in relationship. Partnership takes deliberate effort for you, and commitment is something you weigh rather than fall into.",
+      "showsUp": "You take relationships seriously and enter them cautiously, you may have married late or early and learned the hard way, and you become genuinely fair-minded."
+    },
+    "scorpio": {
+      "definition": "The lesson is in trust and control. Letting go — of resources, of secrets, of people — is the work.",
+      "showsUp": "You hold on tightly, you deal with power and money carefully, and you develop real resilience through what you have had to face."
+    },
+    "sagittarius": {
+      "definition": "The lesson is in belief. You cannot borrow a worldview; you have to construct one and take responsibility for it.",
+      "showsUp": "You are sceptical of easy answers, you may have wrestled with the faith or philosophy you were raised in, and you end up with convictions you can defend."
+    },
+    "capricorn": {
+      "definition": "The lesson is in responsibility itself. Saturn rules this sign: duty comes early and heavily, and so does competence.",
+      "showsUp": "You were serious as a child, you struggle to stop working, and you carry authority naturally by the time you are middle-aged."
+    },
+    "aquarius": {
+      "definition": "The lesson is in belonging to a group without dissolving into it. Saturn also rules this sign, and it makes independence a discipline rather than a mood.",
+      "showsUp": "You feel like an outsider in most rooms, you are wary of joining things, and you become the person who holds a community together anyway."
+    },
+    "pisces": {
+      "definition": "The lesson is in boundaries. Where you end and other people begin is not obvious to you, and drawing that line is the work of years.",
+      "showsUp": "You take on burdens that were never yours, you struggle to say no, and you develop a quiet, hard-won compassion that does not exhaust you."
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "key": "midheaven",
+  "name": "Midheaven",
+  "defines": "Your public direction: career, reputation and what you are known for.",
+  "signs": {
+    "aries": "You are recognised as someone who moves first, your ambition is impatient, and you would rather lead a small thing than follow a large one.",
+    "taurus": "What you are aiming at is security and something solid to show for the years, and people read you as unhurried and hard to shift.",
+    "gemini": "Your direction changes as your interests do, and at a distance you are taken for clever, current and impossible to pin to one thing.",
+    "cancer": "You are heading towards something you can look after, and strangers register you as approachable before they register you as capable.",
+    "leo": "You are aiming at recognition and will not pretend otherwise, and you appear confident from across a room whether or not you feel it.",
+    "virgo": "Your ambition is to be genuinely good at it rather than celebrated for it, and you give an impression of precision and slight reserve.",
+    "libra": "You are heading towards something civilised and shared, and the impression you leave is polished, even-handed and easy to deal with.",
+    "scorpio": "Your aims are not advertised, and people sense there is more to you than the position you occupy, which there is.",
+    "sagittarius": "You are aiming at somewhere larger than where you started, and you come across as frank, curious and faintly ungovernable.",
+    "capricorn": "Your ambition is long-range and structural, and you are taken for a serious person some years before you have earned it.",
+    "aquarius": "You are heading somewhere nobody has quite mapped, and you give off independence, principle and a distinct resistance to being recruited.",
+    "pisces": "Your direction is felt rather than planned, and the impression you leave from a distance is gentle, elusive and difficult to summarise."
+  }
+}

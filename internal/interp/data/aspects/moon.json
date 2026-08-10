@@ -1,0 +1,65 @@
+{
+  "body": "moon",
+  "with": {
+    "mercury": {
+      "conjunction": "You think out loud in feelings, you cannot separate what you know from what you sense, and your memory for detail is unusually long.",
+      "harmonious": "You can say how you feel while you are feeling it, which most people cannot, and it makes you easy to be near.",
+      "square": "Your head and your gut file conflicting reports, and you talk yourself out of moods rather than through them.",
+      "opposition": "You reason against your own feelings, and you rely on somebody else to tell you which of the two was right."
+    },
+    "venus": {
+      "conjunction": "Comfort and affection are the same need for you, and you soothe yourself with food, beauty and being liked.",
+      "harmonious": "You are easy company: warm without effort, generous with reassurance, and genuinely restored by pleasant surroundings.",
+      "square": "What you need from people and what you want from them are different things, and you go looking for one and settle for the other.",
+      "opposition": "You need closeness and you need admiration, and the two have arrived from different people more often than from one."
+    },
+    "mars": {
+      "conjunction": "Your feelings arrive as action; you are protective, quick to flare, and quite unable to brood quietly for long.",
+      "harmonious": "You defend the people you care about without hesitating, and doing something physical is how you clear a bad mood.",
+      "square": "Your temper is emotional rather than reasoned, it goes off before you have decided anything, and it is spent almost as quickly.",
+      "opposition": "Conflict lands on you personally and reaches you through other people, so somebody is always the aggressor in your account of it."
+    },
+    "jupiter": {
+      "conjunction": "You feel things generously and at scale, you are hard to depress for long, and comfort is one of the things you overdo.",
+      "harmonious": "Your instinct is to expect the best of people, and you recover your spirits quickly enough that others come to you to do the same.",
+      "square": "Your moods are outsized, you overpromise emotionally, and you find you have committed to more than you can sustain.",
+      "opposition": "You look for reassurance in steadily larger doses, usually from somebody happy to supply it and not to be held to it."
+    },
+    "saturn": {
+      "conjunction": "You learned early that needing things was inconvenient, so you manage without and describe that as being fine.",
+      "harmonious": "Your emotional life has a structure to it, you are reliable in a crisis, and you do not come apart when it would be easiest to.",
+      "square": "You are hard on yourself for feeling anything at all, and the loneliness that follows was very largely arranged by you.",
+      "opposition": "Someone withheld warmth early and you keep re-encountering them, so you expect coldness and are startled into gratitude by ordinary kindness."
+    },
+    "uranus": {
+      "conjunction": "Your moods are sudden and unpredictable even to you, and you need more room inside closeness than most people think to offer.",
+      "harmonious": "You are emotionally independent without being cold, and you adapt to upheaval considerably faster than anyone expects.",
+      "square": "You bolt when things get close, and the restlessness reads to other people as a lack of interest that it is not.",
+      "opposition": "Your domestic life keeps being upended from outside, and you are drawn to people who cannot be relied upon."
+    },
+    "neptune": {
+      "conjunction": "You absorb the mood of a room before anybody speaks, and you cannot always tell whose feeling you are currently having.",
+      "harmonious": "Your sympathy is genuine and close to inexhaustible, and imagination is where you go to look after yourself.",
+      "square": "You mistake your longing for your needs, and you look after other people partly so as not to examine your own.",
+      "opposition": "You give more than you have and call it love, and it usually takes something going badly wrong before you see the pattern."
+    },
+    "pluto": {
+      "conjunction": "You feel everything at maximum depth, you attach fiercely, and letting go of anything takes years rather than weeks.",
+      "harmonious": "You are unfrightened by other people's darkest material, and you can sit with what cannot be fixed without needing to fix it.",
+      "square": "Your needs come out as control, jealousy or silence, and the emotional crises of your life have all been the same crisis.",
+      "opposition": "Intensity arrives through the people closest to you, and your relationships have a habit of demanding total honesty or ending."
+    },
+    "ascendant": {
+      "conjunction": "You wear your mood on the outside; people read you across a room and there is nothing you can do about it.",
+      "harmonious": "The way you come across matches how you actually feel, which makes you unusually easy to trust.",
+      "square": "Your manner and your feelings contradict one another, so you are taken for cool when you are churning, or the reverse.",
+      "opposition": "Your emotional life is lived through other people, and you feel most like yourself when somebody else is in the room."
+    },
+    "midheaven": {
+      "conjunction": "Your work has to feel right or you cannot do it, and your standing is bound up with how you look after people.",
+      "harmonious": "You can make a living out of what you naturally care about, and the public and private halves of your life feed each other.",
+      "square": "Your career and your home cannot both be fed, and every advance in one has been paid for out of the other.",
+      "opposition": "What you need and what you are meant to be seen doing point in opposite directions, and the family is usually where the bill lands."
+    }
+  }
+}

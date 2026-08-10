@@ -1,0 +1,41 @@
+{
+  "body": "jupiter",
+  "with": {
+    "saturn": {
+      "conjunction": "Optimism and caution arrive together in you, which makes you the rare person who plans expansively and then actually costs it.",
+      "harmonious": "You see the possibility and the practical steps at once, and you build things that last because you were never only enthusiastic.",
+      "square": "You alternate between overreaching and shutting down, and you have talked yourself out of about as much as you have talked yourself into.",
+      "opposition": "Every scheme of yours meets its accountant, occasionally internally and more often in a person, and both of you turn out half right."
+    },
+    "uranus": {
+      "conjunction": "Your luck arrives suddenly and from nowhere, and you are drawn to whatever has only just been invented.",
+      "harmonious": "You spot the opening before it becomes obvious and you are willing to move on it, which has worked out more often than not.",
+      "square": "You gamble on the exciting version, and the timing of your escapes and of your losses is equally unplanned.",
+      "opposition": "The opportunity always comes through somebody else, and it always requires you to drop whatever you were doing."
+    },
+    "neptune": {
+      "conjunction": "You believe in something larger than the evidence supports, and it is both the best and the most expensive thing about you.",
+      "harmonious": "Your generosity is genuinely selfless and your imagination unusually large, and you are the person others bring their hopes to.",
+      "square": "You are taken in by causes and by people, and the difference between faith and wishful thinking is one you keep relearning.",
+      "opposition": "Somebody else supplies the vision and you supply the funding, or the reverse, and it has cost you at least once."
+    },
+    "pluto": {
+      "conjunction": "You do things at scale and you mean them, and whatever you commit to becomes the organising fact of a decade.",
+      "harmonious": "You can mobilise resources and people towards something large, and you are comfortable with the power that involves.",
+      "square": "You want to remake things wholesale, and your certainty that you are right is the part that gets you into trouble.",
+      "opposition": "You keep meeting people with more power and more conviction than you, and those encounters have changed what you believe."
+    },
+    "ascendant": {
+      "conjunction": "You come across as larger than you are: warm, expansive, and taking up rather more room than you realise.",
+      "harmonious": "People like you before they know why, and the benefit of the doubt has quietly been worth a great deal to you.",
+      "square": "You overdo the first impression and then have to live up to it, and you have promised things in the first ten minutes.",
+      "opposition": "The people you attract are bigger, louder or luckier than you, and you have grown by standing next to them."
+    },
+    "midheaven": {
+      "conjunction": "Your career expands whenever you stop managing it, and you are known for optimism, breadth or a generous reputation.",
+      "harmonious": "Opportunities arrive at work without much campaigning, and your standing grows because people enjoy recommending you.",
+      "square": "Your ambitions outrun what the job can hold, and you have left good positions because they had started to feel small.",
+      "opposition": "Your public prospects and your private foundations want different things, and you have moved house for work more than once."
+    }
+  }
+}

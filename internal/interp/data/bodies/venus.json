@@ -1,0 +1,55 @@
+{
+  "key": "venus",
+  "name": "Venus",
+  "defines": "What you value and how you love — your taste, what draws you to people, and the way you show affection.",
+  "signs": {
+    "aries": {
+      "definition": "You love directly and at speed. Attraction is immediate for you, and the pursuit is a real part of the pleasure.",
+      "showsUp": "You make the first move, you are put off by hesitation, and you can lose interest once something stops feeling like an adventure."
+    },
+    "taurus": {
+      "definition": "You love physically and durably. Venus rules this sign: affection means presence, touch, good food, and staying.",
+      "showsUp": "You show love by feeding people and being reliably there, you have settled taste rather than fashionable taste, and you are very hard to dislodge once attached."
+    },
+    "gemini": {
+      "definition": "You love through conversation. Someone becomes attractive to you when they are interesting, and stops being attractive when they are not.",
+      "showsUp": "You flirt by talking, you need a partner you can think out loud with, and you go cold on anyone who bores you however kind they are."
+    },
+    "cancer": {
+      "definition": "You love protectively. Affection means looking after someone and being let close enough to be looked after in return.",
+      "showsUp": "You nurture the people you love and remember every anniversary, you take a long time to open up, and you take withdrawal harder than conflict."
+    },
+    "leo": {
+      "definition": "You love generously and want it visible. Being chosen openly, and choosing openly in return, is the point for you.",
+      "showsUp": "You are lavish with gifts and compliments, you want romance to have some occasion to it, and you are wounded by affection that stays private."
+    },
+    "virgo": {
+      "definition": "You love through care and attention. You show it by noticing what someone needs and quietly handling it.",
+      "showsUp": "You do the practical thing rather than say the sweeping thing, you are slow to commit and thorough once you have, and you can criticise where you meant to help."
+    },
+    "libra": {
+      "definition": "You love partnership itself. Venus rules this sign too: you are drawn to grace, fairness and the pleasure of being properly matched.",
+      "showsUp": "You are charming and easy to be around, you dislike ugliness in surroundings and in behaviour, and you will bend a long way to keep the peace."
+    },
+    "scorpio": {
+      "definition": "You love completely or not at all. Intimacy for you means being fully known, which is exactly why you are careful about who you let in.",
+      "showsUp": "You are intensely loyal, you find surface friendliness unsatisfying, and you feel jealousy more strongly than you would like to."
+    },
+    "sagittarius": {
+      "definition": "You love in motion. You are drawn to people who expand your world, and you need a relationship to leave room in it.",
+      "showsUp": "You fall for someone's outlook before their circumstances, you resist anything that feels like being fenced in, and you are affectionate and blunt in equal measure."
+    },
+    "capricorn": {
+      "definition": "You love seriously. Affection is something you demonstrate over years rather than declare, and you want a relationship to be built, not just felt.",
+      "showsUp": "You are reserved early and steady long-term, you show love by taking on responsibility, and you are quietly embarrassed by grand gestures."
+    },
+    "aquarius": {
+      "definition": "You love as a friend first. Equality and independence matter more to you than intensity, and you resist the conventional shape of relationships.",
+      "showsUp": "You need friendship inside the romance, you keep some part of yourself separate on principle, and you are drawn to people who are unlike everyone else."
+    },
+    "pisces": {
+      "definition": "You love without much of a boundary. Compassion and romance run together for you, and you are drawn to whatever moves you.",
+      "showsUp": "You give more than is asked, you idealise people early and see them clearly late, and you are moved by beauty and by music almost physically."
+    }
+  }
+}

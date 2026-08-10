@@ -1,0 +1,55 @@
+{
+  "key": "descendant",
+  "name": "Descendant",
+  "defines": "The point opposite the Ascendant: what you look for in other people, the qualities you meet in close partnership, and the part of yourself you tend to find through someone else.",
+  "signs": {
+    "aries": {
+      "definition": "You are drawn to decisiveness. Partnership brings you people who act, and through them you learn to want things directly yourself.",
+      "showsUp": "You end up with the bold ones, you are attracted to certainty, and your relationships have some healthy friction in them."
+    },
+    "taurus": {
+      "definition": "You are drawn to steadiness. Partnership brings you people who are solid and unhurried, and through them you learn to stay put.",
+      "showsUp": "You look for reliability over excitement, you value a partner who is calm, and you settle down more than you expected to."
+    },
+    "gemini": {
+      "definition": "You are drawn to quickness of mind. Partnership brings you people who talk, and through them you learn to think out loud.",
+      "showsUp": "You need conversation more than romance, you are attracted to wit, and you get restless with a partner who has nothing to say."
+    },
+    "cancer": {
+      "definition": "You are drawn to care. Partnership brings you people who look after you, and through them you learn to admit that you need looking after.",
+      "showsUp": "You look for warmth and safety in a partner, you are drawn to people who make a home, and closeness matters to you more than you let on."
+    },
+    "leo": {
+      "definition": "You are drawn to warmth and confidence. Partnership brings you people with presence, and through them you learn to be seen.",
+      "showsUp": "You are attracted to generosity and a bit of flair, and you find your own confidence reflected back through the people you love."
+    },
+    "virgo": {
+      "definition": "You are drawn to competence. Partnership brings you people who are careful and useful, and through them you learn to attend to detail.",
+      "showsUp": "You value a partner who is genuinely good at things, you appreciate practical care over declarations, and you can be exacting about who qualifies."
+    },
+    "libra": {
+      "definition": "You are drawn to grace and fairness. Partnership brings you people who meet you halfway, and through them you learn how to share the ground.",
+      "showsUp": "You want a genuine equal, you dislike relationships with an imbalance of power, and you take partnership seriously as a project."
+    },
+    "scorpio": {
+      "definition": "You are drawn to depth. Partnership brings you people who are intense and private, and through them you learn how far down you are willing to go.",
+      "showsUp": "You have little patience for shallow connection, your relationships change you, and you are attracted to what you cannot immediately read."
+    },
+    "sagittarius": {
+      "definition": "You are drawn to openness. Partnership brings you people who widen your world, and through them you learn to loosen your grip.",
+      "showsUp": "You are attracted to honesty and a big outlook, you need room inside a relationship, and you often partner across some kind of distance or difference."
+    },
+    "capricorn": {
+      "definition": "You are drawn to substance. Partnership brings you people who are serious and capable, and through them you learn to commit properly.",
+      "showsUp": "You are attracted to maturity and self-command, you take a long view of relationships, and you may partner with someone older or more established."
+    },
+    "aquarius": {
+      "definition": "You are drawn to independence. Partnership brings you people who are their own, and through them you learn to hold your own separateness.",
+      "showsUp": "You need friendship at the centre of a relationship, you resist convention about how it should look, and you are attracted to originality."
+    },
+    "pisces": {
+      "definition": "You are drawn to sensitivity. Partnership brings you people who feel a great deal, and through them you learn compassion and where your edges are.",
+      "showsUp": "You are attracted to gentleness and imagination, you can idealise a partner, and you have to learn to see the person rather than the potential."
+    }
+  }
+}

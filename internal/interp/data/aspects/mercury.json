@@ -1,0 +1,59 @@
+{
+  "body": "mercury",
+  "with": {
+    "venus": {
+      "conjunction": "You express affection in words and choose them well; charm, taste and conversation are a single faculty in you.",
+      "harmonious": "You are diplomatic without being insincere, you write and speak pleasantly, and most things can be defused by your saying them nicely.",
+      "square": "You smooth the phrasing until the meaning has gone out of it, and you avoid the one sentence that would settle the matter.",
+      "opposition": "You talk your way around what you feel, and it takes somebody else asking the blunt question to get it out of you."
+    },
+    "mars": {
+      "conjunction": "You think fast and say it faster, and you are sharp, quick, and rather good at arguments you had no need to start.",
+      "harmonious": "You make decisions at speed and act on them, and you can be blunt without anybody taking offence at it.",
+      "square": "You speak before you have finished thinking, and the cleverness comes out as cutting far more often than you intend.",
+      "opposition": "You do your thinking against somebody; debate sharpens you, but you cannot always tell it apart from picking a fight."
+    },
+    "jupiter": {
+      "conjunction": "You think in wide arcs, generalise happily, and are a genuinely good explainer who occasionally overstates the case.",
+      "harmonious": "You learn quickly and teach naturally, and you can hold a large subject in your head without losing your way inside it.",
+      "square": "You promise more in conversation than you can deliver, and the detail you skipped over is invariably the one that mattered.",
+      "opposition": "Your grand conclusions keep meeting somebody else's small facts, and most of what you know you learned by being corrected."
+    },
+    "saturn": {
+      "conjunction": "You think carefully and slowly, say rather less than you know, and will not commit to a sentence you cannot defend.",
+      "harmonious": "Your mind is orderly and retentive, you are good at anything requiring sustained concentration, and you finish what you start reading.",
+      "square": "You censor yourself before speaking and then regret the silence, and you mistake your own caution for a lack of ability.",
+      "opposition": "Criticism comes from outside and lands hard, and you have organised your thinking around never being caught out."
+    },
+    "uranus": {
+      "conjunction": "Your mind jumps rather than walks; you arrive at the answer without the working and cannot always reconstruct how.",
+      "harmonious": "You see the unusual angle quickly and can explain it, which makes you valuable whenever the standard approach has failed.",
+      "square": "You are impatient with anything explained slowly, you interrupt, and you change your mind at the speed of the last good idea.",
+      "opposition": "Other people supply the disruption to your thinking, and the conversations that changed you were the ones that irritated you at the time."
+    },
+    "neptune": {
+      "conjunction": "You think in images rather than propositions, which makes you imaginative and thoroughly unreliable about details and appointments.",
+      "harmonious": "You have an ear for what is not being said, and you can put a vague feeling into words other people recognise.",
+      "square": "You are vague where precision was wanted and you know it, and you have talked yourself into believing your own softer version.",
+      "opposition": "You are easily talked into things, and the misunderstandings in your life have come from what you assumed rather than checked."
+    },
+    "pluto": {
+      "conjunction": "You do not skim: you research, and you would rather know the uncomfortable thing than stay comfortable not knowing it.",
+      "harmonious": "You get to the bottom of matters people would rather leave alone, and you can say the difficult sentence without cruelty.",
+      "square": "Your mind grinds, going over the same material for a hidden meaning, and you are suspicious when there turns out not to be one.",
+      "opposition": "You meet your own obsessions in other people, and the arguments that mattered in your life were all about who was telling the truth."
+    },
+    "ascendant": {
+      "conjunction": "You come across as your mind — talkative, quick, and closely identified with whatever you have just said.",
+      "harmonious": "You explain yourself easily and people understand you at the first pass, which quietly makes a great deal of your life simpler.",
+      "square": "The way you talk gets in the way of how you want to be taken, and you are read as glib or as awkward.",
+      "opposition": "You need somebody to think against, and you barely know your own view until you have said it to a face."
+    },
+    "midheaven": {
+      "conjunction": "You are known for what you say or write, and communication is either your work or the reason you were given it.",
+      "harmonious": "You can put your work into words, and that advances you at least as much as the work itself does.",
+      "square": "Your ideas and your career pull apart, and you have spent years saying things that were not what you meant to say.",
+      "opposition": "Your public position and your private opinion diverge, and you have been careful about which of them you air."
+    }
+  }
+}

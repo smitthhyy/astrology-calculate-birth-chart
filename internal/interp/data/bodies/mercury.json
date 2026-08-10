@@ -1,0 +1,55 @@
+{
+  "key": "mercury",
+  "name": "Mercury",
+  "defines": "How you think and communicate — the way you take information in, sort it, and hand it back to other people.",
+  "signs": {
+    "aries": {
+      "definition": "Fast, direct thinking. You reach a conclusion quickly and state it plainly, and you would rather be corrected than be slow.",
+      "showsUp": "You interrupt when you have got there first, you argue to sharpen an idea rather than to win, and long preambles lose you."
+    },
+    "taurus": {
+      "definition": "Slow, concrete thinking. You need to turn a thing over before you will commit to a view, and once you have, it stays put.",
+      "showsUp": "You are hard to hurry into an opinion and harder to talk out of one, and you trust what you can see and touch over what you have been told."
+    },
+    "gemini": {
+      "definition": "Quick, wide-ranging thinking. Mercury is at home here: you take in a great deal at once and connect things nobody put next to each other.",
+      "showsUp": "You are a natural talker and explainer, you have several conversations and tabs going at once, and you get bored before a subject is finished."
+    },
+    "cancer": {
+      "definition": "Thinking coloured by feeling and memory. You reason from what you have lived, and you remember the tone of a conversation long after its content.",
+      "showsUp": "You take remarks personally, you recall what someone said years ago almost verbatim, and you communicate more through warmth than through precision."
+    },
+    "leo": {
+      "definition": "Confident, performed thinking. You are interested in ideas that can be told well, and you speak with the whole of yourself behind the words.",
+      "showsUp": "You are a good storyteller, you speak in definite statements, and you take disagreement with your ideas as disagreement with you."
+    },
+    "virgo": {
+      "definition": "Precise, analytical thinking. Mercury is strongest here: you break a thing into parts, test each one, and find the flaw.",
+      "showsUp": "You correct details others let pass, you write and edit carefully, and you can worry a problem long past the point of usefulness."
+    },
+    "libra": {
+      "definition": "Comparative thinking. You cannot see one side without immediately seeing the other, which makes you fair and makes deciding hard.",
+      "showsUp": "You phrase things diplomatically, you weigh options at length, and you argue the missing side of a debate almost involuntarily."
+    },
+    "scorpio": {
+      "definition": "Penetrating thinking. You are not satisfied with the stated reason and keep going until you have the real one.",
+      "showsUp": "You ask the question everyone else avoided, you notice what is being left out, and you keep your own conclusions to yourself until you are ready."
+    },
+    "sagittarius": {
+      "definition": "Big-picture thinking. You reach for the principle behind the particulars and are impatient with detail that does not serve it.",
+      "showsUp": "You speak in generalisations and get caught out on specifics, you say what you think without editing, and you learn best by going and seeing."
+    },
+    "capricorn": {
+      "definition": "Structured, practical thinking. You want to know what a thing is for and whether it will hold, and you say only what you can stand behind.",
+      "showsUp": "You are economical with words, dry rather than effusive, and slow to state a view you have not yet checked."
+    },
+    "aquarius": {
+      "definition": "Original, systemic thinking. You see the pattern and the exception at once, and you are drawn to the idea that overturns the assumption.",
+      "showsUp": "You take contrary positions to test them, you explain things in terms of how the whole system works, and you can be coolly logical about things people feel strongly about."
+    },
+    "pisces": {
+      "definition": "Associative, impressionistic thinking. You understand things whole before you can explain them in parts, and you often know without being able to say how.",
+      "showsUp": "You think in images and metaphors, you lose the thread of literal detail, and your first impression of a person is usually right."
+    }
+  }
+}

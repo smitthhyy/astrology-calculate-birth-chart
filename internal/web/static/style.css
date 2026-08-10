@@ -1,0 +1,550 @@
+/* Mobile-first. The only breakpoint that matters is the one where the wide
+   tables stop fitting and become stacked cards. */
+
+:root {
+  color-scheme: light;
+
+  --page:            #f9f9f7;
+  --surface:         #fcfcfb;
+  --text-primary:    #0b0b0b;
+  --text-secondary:  #52514e;
+  --text-muted:      #898781;
+  --hairline:        #e1e0d9;
+  --rule:            #c3c2b7;
+  --accent:          #2a78d6;
+  --accent-ink:      #ffffff;
+  --harmonious:      #2a78d6;
+  --challenging:     #e34948;
+  --warn-bg:         #fdf5e3;
+  --warn-border:     #eda100;
+  --error:           #c2302f;
+  --error-bg:        #fdeceb;
+
+  --radius:  10px;
+  --gutter:  clamp(1rem, 4vw, 2.5rem);
+  --measure: 74rem;
+
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --page:           #0d0d0d;
+    --surface:        #1a1a19;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --hairline:       #2c2c2a;
+    --rule:           #383835;
+    --accent:         #3987e5;
+    --harmonious:     #3987e5;
+    --challenging:    #e66767;
+    --warn-bg:        #2a2312;
+    --warn-border:    #c98500;
+    --error:          #ef8a89;
+    --error-bg:       #2c1615;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --page:           #0d0d0d;
+  --surface:        #1a1a19;
+  --text-primary:   #ffffff;
+  --text-secondary: #c3c2b7;
+  --text-muted:     #898781;
+  --hairline:       #2c2c2a;
+  --rule:           #383835;
+  --accent:         #3987e5;
+  --harmonious:     #3987e5;
+  --challenging:    #e66767;
+  --warn-bg:        #2a2312;
+  --warn-border:    #c98500;
+  --error:          #ef8a89;
+  --error-bg:       #2c1615;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+  background: var(--page);
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 var(--gutter) 4rem;
+}
+
+h1 { font-size: clamp(1.6rem, 5vw, 2.3rem); line-height: 1.2; margin: 0 0 .5rem; }
+h2 { font-size: clamp(1.2rem, 3.6vw, 1.5rem); margin: 2.5rem 0 .75rem; }
+p  { margin: 0 0 1rem; }
+
+a { color: var(--accent); }
+
+/* ---------- header & footer ---------- */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 1rem var(--gutter);
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.wordmark-glyph { font-size: 1.4rem; }
+
+.theme-toggle {
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  color: var(--text-primary);
+  border-radius: 999px;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.theme-toggle:hover { border-color: var(--accent); }
+
+.site-footer {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 1.5rem var(--gutter) 3rem;
+  border-top: 1px solid var(--hairline);
+  color: var(--text-muted);
+  font-size: .85rem;
+}
+
+.footer-fine { margin: 0; }
+
+/* ---------- intro & alerts ---------- */
+
+.intro { max-width: 44rem; }
+.intro p { color: var(--text-secondary); }
+
+.section-note { color: var(--text-secondary); max-width: 52rem; }
+
+.alert {
+  border-radius: var(--radius);
+  padding: .85rem 1rem;
+  margin: 0 0 1.25rem;
+  border: 1px solid;
+}
+
+.alert-error { background: var(--error-bg); border-color: var(--error); color: var(--text-primary); }
+.alert-warn  { background: var(--warn-bg);  border-color: var(--warn-border); color: var(--text-primary); }
+
+/* ---------- form ---------- */
+
+.birth-form {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: clamp(1rem, 4vw, 1.75rem);
+  max-width: 44rem;
+  margin-top: 1.5rem;
+}
+
+.field { margin-bottom: 1.25rem; min-width: 0; }
+
+.field-row {
+  display: grid;
+  gap: 0 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 34rem) {
+  .field-row { grid-template-columns: 1fr 1fr; }
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .35rem;
+  font-size: .95rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: .65rem .75rem;
+  font: inherit;
+  font-size: 1rem; /* stops iOS Safari zooming on focus */
+  color: var(--text-primary);
+  background: var(--page);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+}
+
+input[type="text"]:focus-visible,
+.theme-toggle:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+input[aria-invalid="true"] { border-color: var(--error); }
+
+.field-hint  { font-size: .82rem; color: var(--text-muted); margin: .3rem 0 0; }
+.field-error { font-size: .85rem; color: var(--error); margin: .3rem 0 0; font-weight: 500; }
+
+.advanced {
+  border-top: 1px solid var(--hairline);
+  padding-top: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.advanced summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: .95rem;
+  margin-bottom: .5rem;
+}
+
+button.primary, .primary {
+  display: inline-block;
+  font: inherit;
+  font-weight: 600;
+  padding: .7rem 1.4rem;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.secondary {
+  display: inline-block;
+  font: inherit;
+  font-weight: 600;
+  padding: .7rem 1.4rem;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-primary);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.linkish {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ---------- combo box ---------- */
+
+.combo { position: relative; }
+
+.combo-list {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 17rem;
+  overflow-y: auto;
+  margin: 0;
+  padding: .25rem;
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / .12);
+}
+
+.combo-list[hidden] { display: none; }
+
+.combo-list li {
+  padding: .55rem .6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: .95rem;
+}
+
+.combo-list li[aria-selected="true"],
+.combo-list li:hover { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+
+.combo-list .combo-sub { display: block; color: var(--text-muted); font-size: .8rem; }
+.combo-list .combo-empty { color: var(--text-muted); cursor: default; }
+.combo-list .combo-empty:hover { background: none; }
+
+/* ---------- result head ---------- */
+
+.result-head { max-width: 52rem; }
+
+.birth-details {
+  display: grid;
+  gap: .5rem 2rem;
+  grid-template-columns: 1fr;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+}
+
+@media (min-width: 40rem) {
+  .birth-details { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.birth-details dt {
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--text-muted);
+}
+
+.birth-details dd { margin: 0; font-variant-numeric: tabular-nums; }
+
+/* ---------- the wheel ---------- */
+
+.wheel-figure {
+  margin: 0;
+  background: #fcfcfb; /* the wheel carries its own paper, in both themes */
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: .5rem;
+  overflow: hidden;
+}
+
+.chart-wheel { display: block; width: 100%; height: auto; }
+
+.wheel-figure figcaption {
+  color: #52514e;
+  font-size: .82rem;
+  padding: .5rem .75rem 0;
+  text-align: center;
+}
+
+.wheel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 1rem;
+}
+
+/* ---------- tables ---------- */
+
+.chart-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.chart-table th, .chart-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: .7rem .85rem;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.chart-table thead th {
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--text-muted);
+  border-bottom: 2px solid var(--rule);
+  white-space: nowrap;
+}
+
+.chart-table tbody tr:last-child th,
+.chart-table tbody tr:last-child td { border-bottom: 0; }
+
+.chart-table tbody th { font-weight: 600; white-space: nowrap; }
+
+.cosmic-table td { font-size: .93rem; color: var(--text-secondary); }
+.cosmic-table td:first-of-type { color: var(--text-primary); }
+
+.glyph {
+  display: inline-block;
+  min-width: 1.4em;
+  /* The angles use letter pairs (AC, MC) rather than a symbol, and those are
+     wider than the min-width, so the gap has to be a margin. */
+  margin-right: .35em;
+  font-size: 1.15em;
+  font-variant-emoji: text;
+}
+
+.position { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.tag {
+  display: inline-block;
+  margin-left: .35rem;
+  padding: .05rem .4rem;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  font-size: .72rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.tag-rx { border-color: var(--challenging); color: var(--challenging); }
+
+.aspect-dot {
+  display: inline-block;
+  width: .6rem;
+  height: .6rem;
+  border-radius: 999px;
+  margin-right: .4rem;
+  vertical-align: baseline;
+}
+
+.aspect-harmonious  { background: var(--harmonious); }
+.aspect-challenging { background: var(--challenging); }
+.aspect-conjunction { background: var(--text-muted); }
+
+/* Below this width five columns of prose cannot fit, so every row becomes a
+   card with its column headings inlined. */
+@media (max-width: 60rem) {
+  .chart-table, .chart-table thead, .chart-table tbody,
+  .chart-table tr, .chart-table th, .chart-table td { display: block; }
+
+  .chart-table { border: 0; background: none; }
+  .chart-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+  .chart-table tr {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    margin-bottom: .85rem;
+    padding: .35rem .25rem;
+  }
+
+  .chart-table th, .chart-table td { border-bottom: 0; padding: .45rem .85rem; }
+
+  .chart-table tbody th {
+    font-size: 1.05rem;
+    padding-top: .7rem;
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: .35rem;
+    white-space: normal;
+  }
+
+  .chart-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: var(--text-muted);
+  }
+
+  /* The row heading already names the body, so repeating it is noise. */
+  .chart-table tbody th::before { content: none; }
+}
+
+/* ---------- print ---------- */
+
+/* This block is also the PDF renderer: the result page's Download as PDF button
+   is the browser's own print pipeline, so what is described here is what the
+   saved file looks like. It is last in the file on purpose — several of these
+   rules only win against the dark-theme palette on source order. */
+
+@page { margin: 14mm; }
+
+@media print {
+  /* Paper is light whatever the screen was. The two dark palettes are selected
+     at specificity 0,1,1, so restating the light one against `:root` alone
+     would lose to them and print white text on white paper — the whole page
+     blank. Both dark selectors are named here to tie on specificity, which this
+     block then wins by coming later. */
+  :root,
+  :root[data-theme="dark"],
+  :root:not([data-theme="light"]) {
+    color-scheme: light;
+
+    --page:            #fff;
+    --surface:         #fff;
+    --text-primary:    #0b0b0b;
+    --text-secondary:  #333230;
+    --text-muted:      #6b6a65;
+    --hairline:        #d5d4cc;
+    --rule:            #a9a89e;
+    --accent:          #1a5fb4;
+    --harmonious:      #2a78d6;
+    --challenging:     #e34948;
+    --warn-bg:         #fdf5e3;
+    --warn-border:     #eda100;
+  }
+
+  .site-header, .site-footer, .wheel-actions, .theme-toggle { display: none; }
+  main { max-width: none; padding: 0; }
+
+  body { font-size: 10pt; }
+  h1 { font-size: 17pt; }
+  h2 { font-size: 12pt; margin-top: 1.2rem; break-after: avoid; }
+
+  a { color: var(--text-primary); text-decoration: none; }
+  /* "Change these details" is a link to the form, which is nothing on paper. */
+  .result-head p:last-child { display: none; }
+
+  /* The tables are what is on screen at desktop width, but a portrait page is
+     about 45rem wide and so falls under the stacked-card breakpoint above.
+     Undo it: five columns of small type fit, and the card version runs several
+     times longer. The rounded corners go too — they come with overflow: hidden,
+     which clips a table that has to break across pages. */
+  .chart-table {
+    display: table;
+    border: 1px solid var(--hairline);
+    border-radius: 0;
+    overflow: visible;
+    background: none;
+    font-size: 8.5pt;
+  }
+  .chart-table thead { position: static; width: auto; height: auto; clip-path: none; display: table-header-group; }
+  .chart-table tbody { display: table-row-group; }
+  .chart-table tr { display: table-row; margin: 0; padding: 0; border: 0; border-radius: 0; break-inside: avoid; }
+  .chart-table th, .chart-table td {
+    display: table-cell;
+    padding: .3rem .4rem;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .chart-table thead th { font-size: 7pt; }
+  .chart-table tbody th { font-size: inherit; white-space: nowrap; margin: 0; }
+  .chart-table td::before { content: none; }
+  .cosmic-table td { font-size: inherit; }
+
+  /* The aspect dot carries the aspect family and the tag carries retrograde,
+     both as colour alone, and backgrounds are dropped from print by default. */
+  .aspect-dot, .tag-rx, .alert-warn {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .birth-details { break-inside: avoid; }
+  .wheel-figure { border: 0; padding: 0; break-inside: avoid; }
+  /* Room for the caption below it on the same page. */
+  .chart-wheel { max-height: 88vh; }
+  .chart-notes { break-inside: avoid; }
+  .chart-notes summary { font-weight: 600; }
+}

@@ -1,0 +1,17 @@
+{
+  "number": 7,
+  "signs": {
+    "aries": "Your relationships run hot and are openly contested; they start suddenly, and the arguments in them are frequent, loud and quickly forgotten.",
+    "taurus": "Your relationships take years to form and outlast everyone's expectations, including your own; the risk is staying long after it stopped working.",
+    "gemini": "Your relationships live on talk and go quiet when the talk stops; you may pair up more than once, and variety matters more to you than permanence.",
+    "cancer": "Your relationships turn domestic quickly; they run on care and on unspoken need, and neither of you says outright when something is wrong.",
+    "leo": "Your relationships are conducted in public and generously; there is warmth in them and there is also a contest over who gets to shine.",
+    "virgo": "Your relationships are working partnerships built on usefulness; the danger is that care turns into correction and affection into a list of faults.",
+    "libra": "Your relationships are the centre of your life and carefully kept in balance; the cost is how much goes unsaid to preserve that balance.",
+    "scorpio": "Your relationships are few, intense and transformative; loyalty in them is absolute, and so is the damage when trust goes.",
+    "sagittarius": "Your relationships need air and travel well; they falter when they become routine, and often bridge two countries or two worlds.",
+    "capricorn": "Your relationships are undertaken seriously and built like an institution; commitment comes as duty first and warmth after.",
+    "aquarius": "Your relationships are unconventional in shape and negotiated as equals; both of you keep a private territory that the other does not enter.",
+    "pisces": "Your relationships are compassionate and boundaryless; you end up rescuing or being rescued, and it takes years to see the person clearly."
+  }
+}

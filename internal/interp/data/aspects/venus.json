@@ -1,0 +1,53 @@
+{
+  "body": "venus",
+  "with": {
+    "mars": {
+      "conjunction": "Wanting and being wanted are one impulse in you, and you are direct about attraction in a way people find thrilling or alarming.",
+      "harmonious": "You pursue what you want without spoiling it, and your relationships carry warmth and appetite in roughly equal measure.",
+      "square": "You want and then you back off, and the habit of chasing whatever resists you and losing interest in whatever does not is yours to break.",
+      "opposition": "Desire and affection keep arriving in different people, and you have run at least one relationship along that split."
+    },
+    "jupiter": {
+      "conjunction": "You like things generously and expensively, and your capacity for pleasure is a good deal larger than your capacity for restraint.",
+      "harmonious": "You are warm, well liked and fortunate in company, and generosity returns to you often enough that you keep offering it.",
+      "square": "You overindulge and overpromise affection, and the bill, financial or emotional, always arrives later than the pleasure did.",
+      "opposition": "Somebody else is always the extravagant one, and you have both enjoyed their appetite and paid for it."
+    },
+    "saturn": {
+      "conjunction": "You take love seriously and slowly, you show it in commitments rather than words, and you assume it has to be earned.",
+      "harmonious": "Your affections are durable, you are not romantic in the showy sense, and you are still there twenty years later.",
+      "square": "You feel unlovable in a way that no evidence corrects, so you choose people who confirm it or keep everyone at a workable distance.",
+      "opposition": "The coldness comes from the other side of the relationship, and you have waited a long time for people who were never going to arrive."
+    },
+    "uranus": {
+      "conjunction": "You fall suddenly and out of nowhere, your taste is unorthodox, and conventional arrangements make you claustrophobic.",
+      "harmonious": "You keep your independence inside your relationships without making a production of it, and you prefer interesting people to suitable ones.",
+      "square": "You want closeness and freedom at full strength simultaneously, and you have ended things purely to feel unattached again.",
+      "opposition": "The unpredictability comes from the other person, and your relationships start and finish faster than you can explain to anyone."
+    },
+    "neptune": {
+      "conjunction": "You love the idea before you have met the person, and beauty affects you in a way that is close to religious.",
+      "harmonious": "Your romanticism is genuine and mostly harmless, it feeds whatever you make, and you see the best in people and often draw it out.",
+      "square": "You idealise, then find out, then feel betrayed by somebody who never claimed to be that; the disappointment runs to a schedule.",
+      "opposition": "You have loved people who were unavailable or not quite real, and you have been the screen for someone else's fantasy too."
+    },
+    "pluto": {
+      "conjunction": "Love is not a light matter for you: you attach completely, and the relationships that mattered rearranged you.",
+      "harmonious": "You are capable of real intimacy rather than the sociable version, and people tell you things they have told nobody else.",
+      "square": "Jealousy, control and the fear of losing somebody run underneath your affections, and one relationship taught you that the hard way.",
+      "opposition": "Intensity reaches you through your partners, and you have been at both ends of a relationship that was really about power."
+    },
+    "ascendant": {
+      "conjunction": "People find you pleasant to look at and easy to be around, and you have coasted on that more than you would admit.",
+      "harmonious": "Your manner is warm and unguarded, and you are given the benefit of the doubt rather more often than the average.",
+      "square": "You try to be liked and it shows, and the visible effort is what puts people off rather than anything you actually are.",
+      "opposition": "You see yourself through whoever you are with, and being on your own has always felt like being unfinished."
+    },
+    "midheaven": {
+      "conjunction": "You are known for being pleasant to deal with, and your work has an element of taste, beauty or diplomacy in it.",
+      "harmonious": "Being liked helps your career and you know it, and the people you get on with are the ones who open the doors.",
+      "square": "Your relationships and your ambition compete for the same hours, and you have let one slide to keep the other going.",
+      "opposition": "Your private affections and your public standing make claims on the same evenings, and somebody is always disappointed."
+    }
+  }
+}

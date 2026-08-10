@@ -1,0 +1,183 @@
+{{define "title"}}{{.Heading}}{{end}}
+
+{{define "main"}}
+<section class="result-head">
+  <h1>{{.Heading}}</h1>
+  <dl class="birth-details">
+    <div><dt>Born</dt><dd>{{.BornOn}} at {{.BornAt}}</dd></div>
+    {{if .BornIn}}<div><dt>Place</dt><dd>{{.BornIn}}</dd></div>{{end}}
+    <div><dt>Time zone used</dt><dd>{{.Zone}}</dd></div>
+    <div><dt>Universal time</dt><dd>{{.UTC}}</dd></div>
+    <div><dt>Houses</dt><dd>{{.System}}</dd></div>
+  </dl>
+  <p><a class="linkish" href="/?{{.Query}}">Change these details</a></p>
+</section>
+
+{{range .Warnings}}
+<div class="alert alert-warn" role="note">{{.Message}}</div>
+{{end}}
+
+{{if .Notes}}
+<details class="chart-notes">
+  <summary>{{len .Notes}} thing{{if ne (len .Notes) 1}}s{{end}} worth knowing about this chart</summary>
+  <ul>
+    {{range .Notes}}<li>{{.Message}}</li>{{end}}
+  </ul>
+  <p class="section-note">
+    None of these is a mistake. They are the places where the chart sits on a
+    boundary, and where another program may well show something slightly
+    different.
+  </p>
+</details>
+{{end}}
+
+<section class="wheel-section">
+  <h2>The chart</h2>
+  <figure class="wheel-figure">
+    {{.Wheel}}
+    <figcaption>
+      The Ascendant is on the left and the signs run anticlockwise. Solid and
+      dashed lines across the middle mark the aspects between planets.
+    </figcaption>
+  </figure>
+  <div class="wheel-actions">
+    <button type="button" class="primary" data-download-png>Download as PNG</button>
+    <button type="button" class="secondary" data-download-pdf>Download as PDF</button>
+    <a class="secondary" href="/chart.svg?{{.Query}}" download="birth-chart.svg">Download as SVG</a>
+    <a class="secondary" href="/chart.json?{{.Query}}">Download the data as JSON</a>
+  </div>
+  <p class="section-note">
+    The PDF is this page as you see it &mdash; the wheel, the tables and every
+    reading, laid out for paper. It comes through the browser&rsquo;s print
+    dialog, so choose <em>Save as PDF</em> as the destination rather than a
+    printer. The JSON file holds the same chart as data &mdash; the birth details
+    as entered, every placement to six decimal places, the house cusps, the
+    aspects and the readings &mdash; for loading into another program.
+  </p>
+</section>
+
+<section>
+  <h2>The planets, the Ascendant and the Descendant</h2>
+  <table class="chart-table cosmic-table">
+    <thead>
+      <tr>
+        <th scope="col">Cosmic Part</th>
+        <th scope="col">Zodiac sign</th>
+        <th scope="col">What it defines</th>
+        <th scope="col">Definition</th>
+        <th scope="col">How it shows up</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{range .Rows}}
+      <tr>
+        <th scope="row" data-label="Cosmic Part">
+          <span class="glyph" aria-hidden="true">{{.Glyph}}&#65038;</span>{{.CosmicPart}}
+        </th>
+        <td data-label="Zodiac sign">
+          <span class="position">{{.Sign}}</span>
+          {{if .Retrograde}}<span class="tag tag-rx" title="Retrograde">&#8478;</span>{{end}}
+          <span class="tag">{{ordinal .House}} house</span>
+        </td>
+        <td data-label="What it defines">{{.Defines}}</td>
+        <td data-label="Definition">{{.Definition}}</td>
+        <td data-label="How it shows up">{{.ShowsUp}}</td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>The houses</h2>
+  <p class="section-note">
+    The houses divide the sky into twelve areas of life. The sign on each cusp
+    colours how you approach that area.
+  </p>
+  <table class="chart-table houses-table">
+    <thead>
+      <tr>
+        <th scope="col">House</th>
+        <th scope="col">Cusp</th>
+        <th scope="col">What it governs</th>
+        <th scope="col">How it shows up</th>
+        <th scope="col">Planets in it</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{range .Houses}}
+      <tr>
+        <th scope="row" data-label="House">{{ordinal .Number}}</th>
+        <td data-label="Cusp"><span class="position">{{.Cusp}} {{.Sign}}</span></td>
+        <td data-label="What it governs">{{.Meaning}}</td>
+        <td data-label="How it shows up">{{.ShowsUp}}</td>
+        <td data-label="Planets in it">{{.Occupants}}</td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Other points</h2>
+  <table class="chart-table points-table">
+    <thead>
+      <tr>
+        <th scope="col">Point</th>
+        <th scope="col">Zodiac sign</th>
+        <th scope="col">What it defines</th>
+        <th scope="col">How it shows up</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{range .Points}}
+      <tr>
+        <th scope="row" data-label="Point">
+          <span class="glyph" aria-hidden="true">{{.Glyph}}&#65038;</span>{{.Name}}
+        </th>
+        <td data-label="Zodiac sign">
+          <span class="position">{{.Sign}}</span>
+          <span class="tag">{{ordinal .House}} house</span>
+        </td>
+        <td data-label="What it defines">{{.Defines}}</td>
+        <td data-label="How it shows up">{{.ShowsUp}}</td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+</section>
+
+{{if .Aspects}}
+<section>
+  <h2>Aspects</h2>
+  <p class="section-note">
+    Aspects are the angles planets make to one another. The orb is how far the
+    angle is from exact &mdash; the smaller it is, the more strongly the pairing
+    is felt.
+  </p>
+  <table class="chart-table aspects-table">
+    <thead>
+      <tr>
+        <th scope="col">Between</th>
+        <th scope="col">Aspect</th>
+        <th scope="col">Orb</th>
+        <th scope="col">How it shows up</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{range .Aspects}}
+      <tr>
+        <th scope="row" data-label="Between">{{.Between}}</th>
+        <td data-label="Aspect">
+          <span class="aspect-dot aspect-{{.Family}}" aria-hidden="true"></span>
+          <span class="glyph" aria-hidden="true">{{.Glyph}}</span>{{.Aspect}}
+        </td>
+        <td data-label="Orb">{{.Orb}}</td>
+        <td data-label="How it shows up">{{.ShowsUp}}</td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+</section>
+{{end}}
+{{end}}

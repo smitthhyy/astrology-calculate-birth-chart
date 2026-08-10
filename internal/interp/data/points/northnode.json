@@ -1,0 +1,19 @@
+{
+  "key": "northNode",
+  "name": "North Node",
+  "defines": "The direction of growth — the unfamiliar territory you are being pushed towards.",
+  "signs": {
+    "aries": "Growth means acting without a consensus behind you, and tolerating being the one who went first and got it wrong.",
+    "taurus": "Growth means settling on something and staying with it, and finding out that steadiness is not the same as stagnation.",
+    "gemini": "Growth means asking rather than pronouncing, and letting a hundred small curiosities take the place of one grand certainty.",
+    "cancer": "Growth means admitting that you need people, and letting yourself be looked after instead of proving you can manage.",
+    "leo": "Growth means stepping forward as yourself rather than as a delegate of the group, and enjoying it without apologising.",
+    "virgo": "Growth means dealing with the specific thing in front of you instead of the whole of it at once.",
+    "libra": "Growth means making room for somebody else's terms, and discovering that compromise is not the same as defeat.",
+    "scorpio": "Growth means letting something end properly, and accepting depth and obligation where you would rather stay unentangled.",
+    "sagittarius": "Growth means trusting your own sense of the whole instead of gathering more information before you will commit.",
+    "capricorn": "Growth means taking responsibility in public, building something with your name on it, and no longer waiting to feel ready.",
+    "aquarius": "Growth means loosening your grip on being special, and finding out what you are worth among a group of equals.",
+    "pisces": "Growth means putting the checklist down and trusting what you cannot verify, your own intuition included."
+  }
+}

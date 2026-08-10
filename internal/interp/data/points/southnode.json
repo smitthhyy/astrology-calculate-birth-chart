@@ -1,0 +1,19 @@
+{
+  "key": "southNode",
+  "name": "South Node",
+  "defines": "What already comes easily, and what you can lean on too heavily.",
+  "signs": {
+    "aries": "Going it alone is second nature, and you reach for independence and confrontation long after they have stopped working.",
+    "taurus": "You are unshakeable and self-sufficient, and you stay in comfortable arrangements well past the point of any usefulness.",
+    "gemini": "Words and quick understanding come to you free, and you use them to stay in the shallows of things that deserve depth.",
+    "cancer": "Looking after people is automatic, and you fall back on being needed rather than risk being seen as capable.",
+    "leo": "Performing is effortless, and you retreat into being the one at the centre when what was wanted was a colleague.",
+    "virgo": "You can take anything apart, and you use analysis and usefulness as a hiding place from the larger question.",
+    "libra": "Accommodating people costs you nothing visible, and you default to keeping the peace when a position needed taking.",
+    "scorpio": "Intensity and control are familiar ground, and you reach for both when the situation only ever needed patience.",
+    "sagittarius": "You can always find a wider perspective, and you use it to get out of the small obligation immediately in front of you.",
+    "capricorn": "Competence and self-command come easily, and you retreat into work and duty rather than admit to a need.",
+    "aquarius": "Standing outside is your reflex, and you hold the detached position long after it has quietly become loneliness.",
+    "pisces": "Sensitivity and escape are your defaults, and you dissolve out of situations that would be better simply faced."
+  }
+}

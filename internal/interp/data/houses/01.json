@@ -1,0 +1,17 @@
+{
+  "number": 1,
+  "signs": {
+    "aries": "Physically restless and quick to recover; you begin things before you are ready and your health suffers most when you are sitting still.",
+    "taurus": "Solidly built and slow to tire; you resist being hurried into anything and need to be physically comfortable before you can concentrate.",
+    "gemini": "Wiry, quick and rarely still; your hands and your attention are always going, and you start far more than you finish.",
+    "cancer": "You feel new situations in your stomach before you have thought about them, and you approach them sideways rather than straight on.",
+    "leo": "Strong physical presence and a good deal of stamina; you throw yourself wholeheartedly at anything with your name attached to it.",
+    "virgo": "Finely tuned and easily thrown by small things; you notice every change in your own body and prepare before you commit to anything.",
+    "libra": "Even-featured and even-tempered; you enter new situations by finding out what is wanted, and you tire quickly in an atmosphere of conflict.",
+    "scorpio": "Considerable physical reserves held back until needed; you size a new situation up completely before you show any part of your hand.",
+    "sagittarius": "Long-limbed and hard to keep indoors; you plunge into new situations cheerfully and work out the consequences afterwards.",
+    "capricorn": "Durable rather than fast, and you wear well; you approach anything new as a project, and you were physically self-contained even as a child.",
+    "aquarius": "Nervy energy that arrives in bursts; you approach a new situation by working out how it functions before you decide whether to join in.",
+    "pisces": "Sensitive to everything around you and easily depleted; you drift into new situations rather than deciding on them, and you need recovery time afterwards."
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "key": "uranus",
+  "name": "Uranus",
+  "defines": "Where you break from convention. Uranus spends about seven years in each sign, so this describes what your whole age group was restless about — the house it falls in shows where it lands in your own life.",
+  "signs": {
+    "aries": {
+      "definition": "A generation that broke with the past by acting first and asking permission never. The change was in who was allowed to start something.",
+      "showsUp": "You are impatient with process, drawn to doing it yourself, and instinctively suspicious of anyone who says a thing cannot be begun."
+    },
+    "taurus": {
+      "definition": "A generation that upended money, land and what counts as value. The change was in the material foundations everyone had assumed were fixed.",
+      "showsUp": "You hold unorthodox views about ownership and security, you resist change until you choose it, and then you change something structural."
+    },
+    "gemini": {
+      "definition": "A generation that transformed how information moves. The change was in communication itself — its speed, its reach and who controlled it.",
+      "showsUp": "You are quick to adopt new ways of talking to people, restless with received wisdom, and drawn to ideas for their novelty."
+    },
+    "cancer": {
+      "definition": "A generation that rewrote the family. The change was in what a home is and who is allowed to make one.",
+      "showsUp": "Your domestic life is unconventional in some way, you are emotionally independent, and you resist being told what a family should look like."
+    },
+    "leo": {
+      "definition": "A generation that reinvented self-expression and celebrity. The change was in who got to be seen and on whose terms.",
+      "showsUp": "You insist on being yourself conspicuously, you are drawn to unusual creative work, and you refuse to perform a role you did not choose."
+    },
+    "virgo": {
+      "definition": "A generation that overhauled work, health and craft. The change was in the systems and methods underneath everything.",
+      "showsUp": "You question standard procedure as a matter of course, you find unorthodox solutions to practical problems, and you have your own way of doing everything."
+    },
+    "libra": {
+      "definition": "A generation that redefined partnership and fairness. The change was in relationships, equality and the law that governs them.",
+      "showsUp": "You hold liberal views about how people should pair up and how justice should work, and you need independence inside your closest relationships."
+    },
+    "scorpio": {
+      "definition": "A generation that dragged the hidden into the open. The change was in power, sexuality and money — the things nobody discussed.",
+      "showsUp": "You are unshockable, drawn to what other people flinch from, and impatient with secrecy dressed up as decorum."
+    },
+    "sagittarius": {
+      "definition": "A generation that broke open belief and borders. The change was in religion, education and how far people could travel.",
+      "showsUp": "You are restless with dogma, drawn to unfamiliar cultures, and you would rather work out your own philosophy than inherit one."
+    },
+    "capricorn": {
+      "definition": "A generation that took apart institutions. The change was in authority, government and the structures everyone had trusted.",
+      "showsUp": "You are sceptical of institutions while working effectively inside them, and you reform things from the position rather than from outside it."
+    },
+    "aquarius": {
+      "definition": "A generation defined by technology and collective ideals. Uranus rules this sign, so the break with the past was the whole point.",
+      "showsUp": "You take radical change as normal, you think in terms of systems and networks, and you are genuinely unbothered by being different."
+    },
+    "pisces": {
+      "definition": "A generation that dissolved boundaries — spiritual, artistic and psychological. The change was in the imagination.",
+      "showsUp": "You are drawn to unorthodox spirituality and art, you sense shifts before they are visible, and you have little respect for arbitrary limits."
+    }
+  }
+}

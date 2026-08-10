@@ -1,0 +1,19 @@
+{
+  "key": "imumCoeli",
+  "name": "Imum Coeli",
+  "defines": "Your private foundation: home, family and where you come from.",
+  "signs": {
+    "aries": "You come from somewhere combative or self-starting, and you recharge by doing something physical rather than by resting.",
+    "taurus": "Your roots are in something tangible and unchanged, and alone you want familiar surroundings, familiar food and no surprises.",
+    "gemini": "Your beginnings were talkative and unsettled, and even by yourself your mind keeps up a commentary you cannot switch off.",
+    "cancer": "You come from a strong emotional inheritance, and what restores you is being somewhere that already knows you.",
+    "leo": "Your earliest sense of yourself was formed by being noticed, and in private you still want a small audience of people who love you.",
+    "virgo": "Your foundations were laid by being useful, and you settle yourself by tidying, mending or putting something back in order.",
+    "libra": "You come from a background where peace was kept, and you cannot rest anywhere that is visually or emotionally jarring.",
+    "scorpio": "There is something at the bottom of your history that was never said aloud, and your innermost self is guarded even from you.",
+    "sagittarius": "Your origins are elsewhere, or you have travelled a long way from them, and you restore yourself by getting out rather than by going back.",
+    "capricorn": "You grew up on the wrong side of the responsibility line, and you are still privately building the security you did not start with.",
+    "aquarius": "You came out of something that did not fit the neighbourhood, and your innermost self is more detached than the one you show.",
+    "pisces": "Your beginnings are hazy or idealised, and what restores you is water, sleep and nobody needing anything from you."
+  }
+}
