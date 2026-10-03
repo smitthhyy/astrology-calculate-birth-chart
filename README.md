@@ -95,16 +95,56 @@ served by the API:
 GET  /chart.json?name=…&date=…&time=…&zone=…&location=…&latitude=…&longitude=…
 GET  /api/chart?…
 POST /api/chart               (form-encoded, the same fields as the web form)
+POST /api/chart               (application/json, the same field names)
 GET  /birth-chart.schema.json (the JSON Schema the document validates against)
 ```
 
 `/chart.json` sets a `Content-Disposition` header so a browser saves it;
 `/api/chart` is the same bytes without one. Incomplete details come back as
-`422` with an `errors` object keyed by field name. Adding `?minorAspects=1` to
-either endpoint includes the quincunx, semisextile, semisquare, sesquisquare,
-quintile and biquintile, each flagged `"minor": true`; they are off by default
-because no reading is written for them and because most software does not list
-them.
+`422` with an `errors` object keyed by field name, and a body that could not be
+read at all as `400` with an `error` string — a request to fix, as against a
+birth to fix. Adding `?minorAspects=1` to either endpoint includes the quincunx,
+semisextile, semisquare, sesquisquare, quintile and biquintile, each flagged
+`"minor": true`; they are off by default because no reading is written for them
+and because most software does not list them.
+
+### Posting the details as JSON
+
+`POST /api/chart` with `Content-Type: application/json` takes the same ten
+fields the form does. A birthplace the gazetteer does not hold is given
+directly — the name, the country, the zone and the coordinates — which is the
+same escape hatch the page offers under **Set the coordinates by hand**:
+
+```
+curl -s http://localhost:8080/api/chart \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "name": "Test",
+        "date": "15/06/1990",
+        "time": "14:30",
+        "zone": "Asia/Manila",
+        "location": "San Felipe, Zambales",
+        "country": "Philippines",
+        "latitude": 15.061180,
+        "longitude": 120.069289
+      }'
+```
+
+| Field | |
+|---|---|
+| `name` | A first name, for the heading |
+| `date` | Day first: `15/06/1990`. Dashes and dots work too |
+| `time` | 24-hour: `14:30` |
+| `zone` | IANA name, e.g. `Asia/Manila`. Leave it out and the zone of the nearest place on file is used, with a warning naming both |
+| `location`, `country` | Kept as typed, whether or not either is on file |
+| `latitude`, `longitude` | A number or a string; `15.061180` and `"15.061180"` both work |
+| `coordinates` | The pair in one string — `"15.061180, 120.069289"` — instead of the two fields |
+| `timeStatus`, `timeSource` | How well the time is known, and where it came from. Neither changes a computed position; both are carried into `birthDataQuality` |
+| `minorAspects` | `true` to include the minor aspects, as the query flag does |
+
+Unknown keys are ignored, and a `rawInput` object is read for anything the top
+level leaves out — so a saved export can be posted straight back to recast that
+chart, which is the round trip `rawInput` exists for.
 
 The document is one object with nine parts:
 

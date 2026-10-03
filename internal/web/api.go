@@ -62,31 +62,44 @@ func (s *Server) handleGeocode(w http.ResponseWriter, r *http.Request) {
 // handleChartJSON returns the chart as JSON for a caller that will read it
 // straight away. handleChartDownload serves the same document as a file.
 func (s *Server) handleChartJSON(w http.ResponseWriter, r *http.Request) {
-	s.serveChartJSON(w, r, "")
+	s.serveChartJSON(w, r, false)
 }
 
 func (s *Server) handleChartDownload(w http.ResponseWriter, r *http.Request) {
-	s.serveChartJSON(w, r, exportFilename(strings.TrimSpace(r.FormValue("name"))))
+	s.serveChartJSON(w, r, true)
 }
 
-// serveChartJSON casts the chart and writes the export document. A non-empty
-// filename turns the response into a download.
-func (s *Server) serveChartJSON(w http.ResponseWriter, r *http.Request, filename string) {
-	in := inputFromRequest(r)
+// serveChartJSON casts the chart and writes the export document. asDownload
+// names the file, which turns the response into a download.
+func (s *Server) serveChartJSON(w http.ResponseWriter, r *http.Request, asDownload bool) {
+	// The details may arrive as a JSON body, a form or a query string. Reading
+	// them has to come before anything else touches the request: for a JSON
+	// body it consumes it.
+	in, options, err := apiInput(w, r)
+	if err != nil {
+		// The request could not be read at all, which is a different thing from
+		// details that were read and found wanting — those come back below as a
+		// 422 with the field named.
+		writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+		return
+	}
 
 	birth, warnings, errs := in.resolve()
 	if errs.Any() {
 		writeJSON(w, http.StatusUnprocessableEntity, map[string]any{"errors": errs})
 		return
 	}
-	chart, err := astro.ComputeWith(birth, exportOptions(r))
+	chart, err := astro.ComputeWith(birth, options)
 	if err != nil {
 		writeJSON(w, http.StatusUnprocessableEntity, map[string]any{"error": err.Error()})
 		return
 	}
 	chart.Warnings = append(warnings, chart.Warnings...)
 
-	if filename != "" {
+	if asDownload {
+		// Named from the details as parsed rather than from the raw request,
+		// so a JSON body gets the same file name a form would.
+		filename := exportFilename(in.Name)
 		w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=%q", filename))
 	}
 	writeJSON(w, http.StatusOK, buildExport(in, chart))
